@@ -2,7 +2,6 @@ import {
   BOOKING_URL,
   INSTAGRAM_URL,
   copy,
-  featuredWorks,
   type Lang,
 } from "./content";
 
@@ -70,7 +69,7 @@ export function jsonLdForPage(page: SeoPage, lang: Lang = "en") {
     jobTitle: lang === "es" ? "Tatuadora" : "Tattoo artist",
     description: seo.description,
     url: SITE_URL,
-    image: absoluteUrl("/images/nina-profile.jpg"),
+    image: absoluteUrl("/images/opt/nina-profile-800.webp"),
     nationality: "CU",
     knowsLanguage: ["en", "es"],
     knowsAbout: [
@@ -99,7 +98,7 @@ export function jsonLdForPage(page: SeoPage, lang: Lang = "en") {
     name: SITE_NAME,
     alternateName: "goodnina tattooing",
     url: SITE_URL,
-    image: [absoluteUrl("/og.jpg"), absoluteUrl("/images/hero.jpg")],
+    image: [absoluteUrl("/og.jpg"), absoluteUrl("/images/opt/hero-1280.webp")],
     description: t.metaDescription,
     inLanguage,
     employee: { "@id": absoluteUrl("/#person") },
@@ -183,7 +182,6 @@ export function jsonLdForPage(page: SeoPage, lang: Lang = "en") {
       inLanguage,
       isPartOf: { "@id": absoluteUrl("/#website") },
       about: { "@id": absoluteUrl("/#person") },
-      image: featuredWorks.map((w) => absoluteUrl(w.src)),
     });
   }
 

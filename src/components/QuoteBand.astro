@@ -1,0 +1,20 @@
+---
+import { copy } from "../lib/content";
+const en = copy.en;
+const es = copy.es;
+---
+
+<section class="below-fold bg-ink px-5 py-20 text-on-photo sm:px-8 sm:py-28">
+  <blockquote class="mx-auto max-w-4xl">
+    <p
+      class="font-display text-section font-medium leading-snug tracking-tight italic text-on-photo"
+      data-en={en.quote}
+      data-es={es.quote}
+    >
+      {en.quote}
+    </p>
+    <footer class="mt-8 kicker text-on-photo/55">
+      <cite class="not-italic">Nina Romero</cite>
+    </footer>
+  </blockquote>
+</section>

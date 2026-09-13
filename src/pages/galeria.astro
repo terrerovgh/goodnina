@@ -1,8 +1,27 @@
 ---
 import Base from "../layouts/Base.astro";
-import GalleryApp from "../apps/GalleryApp";
+import GalleryGrid from "../components/GalleryGrid.astro";
+import { copy } from "../lib/content";
+const en = copy.en;
+const es = copy.es;
 ---
 
 <Base page="gallery">
-  <GalleryApp client:load />
+  <div class="pt-28 pb-20 sm:pt-32 sm:pb-28">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <h1
+        class="font-display text-section font-medium tracking-tight text-ink italic"
+        data-en={en.gallery.pageTitle}
+        data-es={es.gallery.pageTitle}
+      >
+        {en.gallery.pageTitle}
+      </h1>
+      <p class="mt-4 max-w-xl text-base leading-relaxed text-muted" data-en={en.gallery.lede} data-es={es.gallery.lede}>
+        {en.gallery.lede}
+      </p>
+      <div class="mt-12">
+        <GalleryGrid />
+      </div>
+    </div>
+  </div>
 </Base>

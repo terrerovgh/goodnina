@@ -1,0 +1,59 @@
+---
+import { BOOKING_URL, INSTAGRAM_URL, copy } from "../lib/content";
+const en = copy.en;
+const es = copy.es;
+---
+
+<section id="agendar" class="below-fold relative overflow-hidden bg-blush">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+      <h2
+        class="font-display text-section font-medium tracking-tight text-ink italic"
+        data-en={en.book.title}
+        data-es={es.book.title}
+      >
+        {en.book.title}
+      </h2>
+      <p class="mt-6 max-w-xl text-lead leading-relaxed text-ink-soft" data-en={en.book.body} data-es={es.book.body}>
+        {en.book.body}
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-ink px-6 text-kicker font-medium tracking-kicker uppercase text-on-photo no-underline hover:bg-ink-soft"
+        >
+          <span data-en={en.book.cta} data-es={es.book.cta}>{en.book.cta}</span>
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M7 17L17 7M9 7h8v8"></path>
+          </svg>
+        </a>
+        <a
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex h-12 items-center justify-center rounded-full px-6 text-kicker font-medium tracking-kicker uppercase text-ink no-underline underline-offset-4 hover:underline"
+          data-en={en.book.instagram}
+          data-es={es.book.instagram}>{en.book.instagram}</a
+        >
+      </div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="overflow-hidden rounded-sm shadow-photo">
+        <img
+          src="/images/opt/nina-profile-800.webp"
+          alt="Nina Romero, Cuban fine line tattoo artist in Albuquerque, New Mexico"
+          data-alt-en="Nina Romero, Cuban fine line tattoo artist in Albuquerque, New Mexico"
+          data-alt-es="Nina Romero, tatuadora cubana de fine line en Albuquerque, Nuevo México"
+          width="800"
+          height="1000"
+          loading="lazy"
+          fetchpriority="low"
+          decoding="async"
+          class="aspect-[4/5] w-full object-cover object-top"
+        />
+      </div>
+    </div>
+  </div>
+</section>

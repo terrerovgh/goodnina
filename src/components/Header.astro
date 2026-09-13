@@ -1,0 +1,84 @@
+---
+import Wordmark from "./Wordmark.astro";
+import { BOOKING_URL, copy } from "../lib/content";
+
+interface Props {
+  overHero?: boolean;
+}
+const { overHero = false } = Astro.props;
+const en = copy.en;
+const es = copy.es;
+---
+
+<header
+  data-header
+  data-over-hero={overHero ? "true" : "false"}
+  data-on-photo={overHero ? "true" : undefined}
+  class="site-header fixed inset-x-0 top-0 z-50 bg-paper/90 shadow-[0_1px_0_rgb(28_24_20/0.08)] backdrop-blur-md"
+>
+  <a
+    href="#contenido"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-paper focus:px-3 focus:py-2 focus:text-ink"
+    data-en={en.skip}
+    data-es={es.skip}>{en.skip}</a
+  >
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:h-[4.5rem] sm:px-8">
+    <Wordmark />
+    <nav class="hidden items-center gap-8 md:flex" aria-label="Primary">
+      <a href="/#sobre" class="nav-link kicker no-underline text-ink hover:opacity-70" data-en={en.nav.about} data-es={es.nav.about}>{en.nav.about}</a>
+      <a href="/galeria" class="nav-link kicker no-underline text-ink hover:opacity-70" data-en={en.nav.work} data-es={es.nav.work}>{en.nav.work}</a>
+      <a href="/#faq" class="nav-link kicker no-underline text-ink hover:opacity-70" data-en={en.nav.faq} data-es={es.nav.faq}>{en.nav.faq}</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div
+        class="lang-switch hidden items-center gap-1 text-kicker font-medium tracking-kicker uppercase text-muted sm:flex"
+        role="group"
+        aria-label={en.langLabel}
+      >
+        <button type="button" data-lang-btn="es" class="px-1.5 py-1">ES</button>
+        <span aria-hidden="true" class="opacity-40">/</span>
+        <button type="button" data-lang-btn="en" class="px-1.5 py-1 is-active">EN</button>
+      </div>
+      <a
+        href={BOOKING_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="book-btn hidden h-10 items-center rounded-full bg-ink px-4 text-kicker font-medium tracking-kicker uppercase text-on-photo no-underline hover:bg-ink-soft sm:inline-flex"
+        data-en={en.nav.book}
+        data-es={es.nav.book}>{en.nav.book}</a
+      >
+      <details class="md:hidden">
+        <summary
+          class="grid size-11 place-items-center text-ink nav-link list-none [&::-webkit-details-marker]:hidden"
+          aria-label="Menu"
+        >
+          <svg class="size-5 icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg class="size-5 icon-close hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 6l12 12M18 6l-12 12"></path>
+          </svg>
+        </summary>
+        <div class="absolute inset-x-0 top-16 border-t border-line bg-paper px-5 py-6 sm:top-[4.5rem]">
+          <nav class="flex flex-col gap-1" aria-label="Mobile">
+            <a href="/#sobre" class="flex min-h-11 items-center font-display text-2xl text-ink no-underline" data-en={en.nav.about} data-es={es.nav.about}>{en.nav.about}</a>
+            <a href="/galeria" class="flex min-h-11 items-center font-display text-2xl text-ink no-underline" data-en={en.nav.work} data-es={es.nav.work}>{en.nav.work}</a>
+            <a href="/#faq" class="flex min-h-11 items-center font-display text-2xl text-ink no-underline" data-en={en.nav.faq} data-es={es.nav.faq}>{en.nav.faq}</a>
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-3 flex h-12 items-center justify-center rounded-full bg-ink text-kicker font-medium tracking-kicker uppercase text-on-photo no-underline"
+              data-en={en.nav.book}
+              data-es={es.nav.book}>{en.nav.book}</a
+            >
+            <div class="mt-4 flex gap-4 text-kicker font-medium tracking-kicker uppercase text-muted">
+              <button type="button" data-lang-btn="es">Español</button>
+              <button type="button" data-lang-btn="en" class="is-active text-ink">English</button>
+            </div>
+          </nav>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>

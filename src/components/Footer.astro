@@ -1,0 +1,36 @@
+---
+import Wordmark from "./Wordmark.astro";
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, copy } from "../lib/content";
+const en = copy.en;
+const es = copy.es;
+---
+
+<footer class="border-t border-line bg-paper-deep">
+  <div
+    class="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-end md:justify-between"
+  >
+    <div class="space-y-3">
+      <Wordmark />
+      <p class="max-w-sm text-sm leading-relaxed text-muted" data-en={en.footer.credit} data-es={es.footer.credit}>
+        {en.footer.credit}
+      </p>
+      <address class="kicker not-italic text-muted" data-en={en.footer.location} data-es={es.footer.location}>{en.footer.location}</address>
+    </div>
+    <nav class="flex flex-col items-start gap-3 md:items-end" aria-label="Footer">
+      <a
+        href={INSTAGRAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-display text-2xl italic text-ink no-underline hover:opacity-60"
+      >
+        {INSTAGRAM_HANDLE}
+      </a>
+      <div class="flex flex-wrap gap-5 text-sm text-muted">
+        <a href="/galeria" class="text-muted no-underline hover:text-ink" data-en={en.footer.work} data-es={es.footer.work}>{en.footer.work}</a>
+        <a href="/#agendar" class="text-muted no-underline hover:text-ink" data-en={en.footer.book} data-es={es.footer.book}>{en.footer.book}</a>
+        <a href="/privacidad" class="text-muted no-underline hover:text-ink" data-en={en.footer.privacy} data-es={es.footer.privacy}>{en.footer.privacy}</a>
+        <a href="/aviso" class="text-muted no-underline hover:text-ink" data-en={en.footer.legal} data-es={es.footer.legal}>{en.footer.legal}</a>
+      </div>
+    </nav>
+  </div>
+</footer>

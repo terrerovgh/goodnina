@@ -1,0 +1,70 @@
+---
+import { copy, works, type Category } from "../lib/content";
+import { galleryWebp } from "../lib/img";
+const en = copy.en;
+const es = copy.es;
+const CATEGORIES: Category[] = ["floral", "ornamental", "lettering", "fineline"];
+---
+
+<div data-gallery>
+  <div
+    class="hide-scrollbar mb-10 flex gap-2 overflow-x-auto pb-2"
+    role="tablist"
+    aria-label={en.gallery.title}
+  >
+    <button type="button" data-filter="all" class="filter-chip is-active" data-en={en.gallery.filterAll} data-es={es.gallery.filterAll}>
+      {en.gallery.filterAll}
+    </button>
+    {
+      CATEGORIES.map((c) => (
+        <button type="button" data-filter={c} class="filter-chip" data-en={en.gallery.filters[c]} data-es={es.gallery.filters[c]}>
+          {en.gallery.filters[c]}
+        </button>
+      ))
+    }
+  </div>
+
+  <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+    {
+      works.map((work, i) => (
+        <li
+          data-category={work.category}
+          class:list={[
+            work.wide && "col-span-2",
+            !work.wide && i % 7 === 0 && "sm:col-span-2",
+          ]}
+        >
+          <button
+            type="button"
+            data-open={work.id}
+            data-alt-en={work.alt.en}
+            data-alt-es={work.alt.es}
+            class:list={[
+              "group relative block w-full overflow-hidden rounded-sm bg-paper-deep shadow-photo",
+              work.wide ? "aspect-[5/3]" : "aspect-[3/4]",
+            ]}
+          >
+            <img
+              src={galleryWebp(work.id, 480)}
+              srcset={`${galleryWebp(work.id, 480)} 480w, ${galleryWebp(work.id, 960)} 960w`}
+              sizes={work.wide ? "(max-width: 640px) 100vw, 50vw" : "(max-width: 640px) 50vw, 25vw"}
+              alt={work.alt.en}
+              data-alt-en={work.alt.en}
+              data-alt-es={work.alt.es}
+              width={work.wide ? 960 : 480}
+              height={work.wide ? 576 : 640}
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              class:list={[
+                "h-full w-full object-cover",
+                work.object === "left" && "object-left",
+                work.object === "top" && "object-top",
+              ]}
+            />
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+</div>

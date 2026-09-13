@@ -1,0 +1,115 @@
+---
+import { copy, featuredWorks } from "../lib/content";
+import { galleryWebp } from "../lib/img";
+const en = copy.en;
+const es = copy.es;
+const FRAMES = [
+  "h-72 w-52 sm:h-80 sm:w-56",
+  "h-80 w-56 sm:h-96 sm:w-64",
+  "h-64 w-60 sm:h-72 sm:w-72",
+  "mt-8 h-72 w-52 sm:h-80 sm:w-56",
+  "h-96 w-56 sm:h-96 sm:w-60",
+  "mt-10 h-64 w-56 sm:h-72 sm:w-64",
+] as const;
+const TILTS = [
+  "-rotate-3",
+  "rotate-2",
+  "-rotate-1",
+  "rotate-3",
+  "-rotate-2",
+  "rotate-1",
+] as const;
+---
+
+<section id="galeria" class="below-fold relative overflow-hidden bg-paper py-20 sm:py-28" data-gallery>
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="mb-10 flex flex-col gap-4 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <h2
+          class="font-display text-section font-medium tracking-tight text-ink italic"
+          data-en={en.gallery.title}
+          data-es={es.gallery.title}
+        >
+          {en.gallery.title}
+        </h2>
+        <p class="mt-3 max-w-md text-sm leading-relaxed text-ink-soft" data-en={en.gallery.hint} data-es={es.gallery.hint}>
+          {en.gallery.hint}
+        </p>
+      </div>
+      <a
+        href="/galeria"
+        class="kicker text-ink no-underline underline-offset-4 hover:underline"
+        data-en={en.gallery.all}
+        data-es={es.gallery.all}>{en.gallery.all}</a
+      >
+    </div>
+  </div>
+
+  <div class="relative">
+    <button
+      type="button"
+      data-scroll="-1"
+      class="absolute top-1/2 left-3 z-20 hidden size-11 -translate-y-1/2 place-items-center rounded-full bg-foam/90 text-ink shadow-photo sm:grid"
+      data-aria-en={en.gallery.prev}
+      data-aria-es="Anterior"
+      aria-label={en.gallery.prev}
+    >
+      <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M15 5l-7 7 7 7"></path>
+      </svg>
+    </button>
+    <button
+      type="button"
+      data-scroll="1"
+      class="absolute top-1/2 right-3 z-20 hidden size-11 -translate-y-1/2 place-items-center rounded-full bg-foam/90 text-ink shadow-photo sm:grid"
+      data-aria-en={en.gallery.next}
+      data-aria-es="Siguiente"
+      aria-label={en.gallery.next}
+    >
+      <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <div
+      data-scroller
+      class="hide-scrollbar flex cursor-grab snap-x snap-mandatory items-end gap-0 overflow-x-auto px-8 py-10 active:cursor-grabbing sm:px-16"
+    >
+      {
+        featuredWorks.map((work, i) => (
+          <button
+            type="button"
+            data-open={work.id}
+            data-alt-en={work.alt.en}
+            data-alt-es={work.alt.es}
+            class:list={[
+              "relative shrink-0 snap-center overflow-hidden rounded-sm bg-paper-deep shadow-photo",
+              FRAMES[i % FRAMES.length],
+              TILTS[i % TILTS.length],
+              i === 0 ? "ml-0" : "-ml-6 sm:-ml-10",
+            ]}
+            style={`z-index: ${(i % 5) + 1}`}
+          >
+            <img
+              src={galleryWebp(work.id, 480)}
+              alt={work.alt.en}
+              data-alt-en={work.alt.en}
+              data-alt-es={work.alt.es}
+              width="480"
+              height="640"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              draggable="false"
+              class:list={[
+                "h-full w-full object-cover",
+                work.object === "left" && "object-left",
+                work.object === "top" && "object-top",
+              ]}
+            />
+          </button>
+        ))
+      }
+    </div>
+  </div>
+</section>

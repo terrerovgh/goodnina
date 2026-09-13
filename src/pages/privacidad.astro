@@ -1,8 +1,17 @@
 ---
 import Base from "../layouts/Base.astro";
-import PrivacyApp from "../apps/PrivacyApp";
+import { copy } from "../lib/content";
+const en = copy.en;
+const es = copy.es;
 ---
 
 <Base page="privacy">
-  <PrivacyApp client:load />
+  <div class="mx-auto max-w-2xl px-5 pt-28 pb-20 sm:px-8 sm:pt-32">
+    <h1 class="font-display text-section font-medium italic text-ink" data-en={en.privacy.title} data-es={es.privacy.title}>
+      {en.privacy.title}
+    </h1>
+    <p class="mt-8 text-lead leading-relaxed text-ink-soft" data-en={en.privacy.body} data-es={es.privacy.body}>
+      {en.privacy.body}
+    </p>
+  </div>
 </Base>

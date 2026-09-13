@@ -1,0 +1,50 @@
+---
+import { copy } from "../lib/content";
+const t = copy.en;
+---
+
+<dialog
+  id="lightbox"
+  class="z-[80] m-0 h-full max-h-none w-full max-w-none items-center justify-center bg-ink/92 p-4 text-on-photo sm:p-8"
+>
+  <button
+    type="button"
+    data-close
+    class="absolute top-4 right-4 grid size-11 place-items-center text-on-photo"
+    data-aria-en={t.gallery.close}
+    data-aria-es="Cerrar"
+    aria-label={t.gallery.close}
+  >
+    <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M6 6l12 12M18 6l-12 12"></path>
+    </svg>
+  </button>
+  <button
+    type="button"
+    data-prev
+    class="absolute top-1/2 left-2 z-10 grid size-11 -translate-y-1/2 place-items-center text-on-photo sm:left-6"
+    data-aria-en={t.gallery.prev}
+    data-aria-es="Anterior"
+    aria-label={t.gallery.prev}
+  >
+    <svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M15 5l-7 7 7 7"></path>
+    </svg>
+  </button>
+  <button
+    type="button"
+    data-next
+    class="absolute top-1/2 right-2 z-10 grid size-11 -translate-y-1/2 place-items-center text-on-photo sm:right-6"
+    data-aria-en={t.gallery.next}
+    data-aria-es="Siguiente"
+    aria-label={t.gallery.next}
+  >
+    <svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+  <figure class="flex max-h-full max-w-3xl flex-col items-center gap-4">
+    <img alt="" class="max-h-[78svh] w-auto max-w-full object-contain outline-none" />
+    <figcaption class="max-w-xl text-center text-sm leading-relaxed text-on-photo/75"></figcaption>
+  </figure>
+</dialog>

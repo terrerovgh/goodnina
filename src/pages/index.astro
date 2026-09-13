@@ -1,8 +1,20 @@
 ---
 import Base from "../layouts/Base.astro";
-import HomeApp from "../apps/HomeApp";
+import Hero from "../components/Hero.astro";
+import Intro from "../components/Intro.astro";
+import StylesBand from "../components/StylesBand.astro";
+import GalleryStrip from "../components/GalleryStrip.astro";
+import QuoteBand from "../components/QuoteBand.astro";
+import Faq from "../components/Faq.astro";
+import Book from "../components/Book.astro";
 ---
 
-<Base page="home">
-  <HomeApp client:load />
+<Base page="home" overHero>
+  <Hero />
+  <Intro />
+  <StylesBand />
+  <GalleryStrip />
+  <QuoteBand />
+  <Faq />
+  <Book />
 </Base>

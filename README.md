@@ -1,6 +1,6 @@
 # Nina Romero — [goodnina.com](https://goodnina.com)
 
-Portfolio site. Astro 5 + React islands + Tailwind v4. Hosted on **Cloudflare Pages** from this repository.
+Portfolio site. Astro 5 (static HTML) + Tailwind v4. Hosted on **Cloudflare Pages** from this repository.
 
 ## Cloudflare Pages
 

@@ -2,31 +2,56 @@
 import "../styles.css";
 import { copy } from "../lib/content";
 import { jsonLdForPage, seoFor, SITE_URL, type SeoPage } from "../lib/seo";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Lightbox from "../components/Lightbox.astro";
 
 interface Props {
   page?: SeoPage;
   title?: string;
   description?: string;
   robots?: string;
+  overHero?: boolean;
 }
 
 const page = Astro.props.page;
-const seo = page ? seoFor(page, "en") : null;
-const title = Astro.props.title ?? seo?.title ?? copy.en.metaTitle;
+const seoEn = page ? seoFor(page, "en") : null;
+const seoEs = page ? seoFor(page, "es") : null;
+const title = Astro.props.title ?? seoEn?.title ?? copy.en.metaTitle;
 const description =
-  Astro.props.description ?? seo?.description ?? copy.en.metaDescription;
+  Astro.props.description ?? seoEn?.description ?? copy.en.metaDescription;
+const titleEs = seoEs?.title ?? copy.es.metaTitle;
+const descEs = seoEs?.description ?? copy.es.metaDescription;
 const robots =
   Astro.props.robots ?? "index, follow, max-image-preview:large";
-const canonical = new URL(seo?.path ?? Astro.url.pathname, SITE_URL).href;
+const canonical = new URL(seoEn?.path ?? Astro.url.pathname, SITE_URL).href;
 const og = new URL("/og.jpg", SITE_URL).href;
 const jsonLd = page ? JSON.stringify(jsonLdForPage(page, "en")) : null;
+const overHero = Astro.props.overHero ?? false;
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  data-title-en={title}
+  data-title-es={titleEs}
+  data-desc-en={description}
+  data-desc-es={descEs}
+>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {
+      overHero ? (
+        <link
+          rel="preload"
+          as="image"
+          type="image/webp"
+          href="/images/opt/hero-720.webp"
+          fetchpriority="high"
+        />
+      ) : null
+    }
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Nina Romero" />
@@ -54,17 +79,15 @@ const jsonLd = page ? JSON.stringify(jsonLdForPage(page, "en")) : null;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={og} />
     <meta name="twitter:image:alt" content={copy.en.ogAlt} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    {jsonLd ? (
-      <script is:inline type="application/ld+json" set:html={jsonLd} />
-    ) : null}
   </head>
-  <body class="antialiased">
-    <slot />
+  <body class="antialiased" data-page={page ?? ""}>
+    <Header overHero={overHero} />
+    <main id="contenido">
+      <slot />
+    </main>
+    <Footer />
+    <Lightbox />
+    {jsonLd ? <script is:inline type="application/ld+json" set:html={jsonLd} /> : null}
+    <script src="../scripts/site.ts"></script>
   </body>
 </html>

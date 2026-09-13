@@ -1,0 +1,40 @@
+---
+import { copy } from "../lib/content";
+const en = copy.en;
+const es = copy.es;
+---
+
+<section id="estilos" class="below-fold border-y border-line bg-paper" aria-labelledby="estilos-title">
+  <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+    <h2
+      id="estilos-title"
+      class="font-display text-section font-medium tracking-tight text-ink italic"
+      data-en={en.styles.title}
+      data-es={es.styles.title}
+    >
+      {en.styles.title}
+    </h2>
+    <ul class="mt-12 grid list-none gap-10 p-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      {
+        en.styles.items.map((item, i) => (
+          <li>
+            <h3
+              class="font-display text-2xl font-medium italic leading-snug text-ink"
+              data-en={item.name}
+              data-es={es.styles.items[i].name}
+            >
+              {item.name}
+            </h3>
+            <p
+              class="mt-3 text-sm leading-relaxed text-ink-soft"
+              data-en={item.body}
+              data-es={es.styles.items[i].body}
+            >
+              {item.body}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

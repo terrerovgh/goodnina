@@ -1,0 +1,60 @@
+---
+import { copy, works } from "../lib/content";
+const en = copy.en;
+const es = copy.es;
+const lotus = works.find((w) => w.id === "paisley-lotus")!;
+const mandala = works.find((w) => w.id === "mandala-eye")!;
+---
+
+<section id="sobre" class="below-fold bg-paper" aria-labelledby="sobre-title">
+  <div
+    class="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12 lg:items-start lg:gap-16"
+  >
+    <div class="lg:col-span-7">
+      <h2
+        id="sobre-title"
+        class="font-display text-section font-medium tracking-tight text-ink italic"
+        data-en={en.intro.title}
+        data-es={es.intro.title}
+      >
+        {en.intro.title}
+      </h2>
+      <div class="mt-8 space-y-6 text-lead leading-relaxed text-ink-soft">
+        <p data-en={en.intro.p1} data-es={es.intro.p1}>{en.intro.p1}</p>
+        <p data-en={en.intro.p2} data-es={es.intro.p2}>{en.intro.p2}</p>
+      </div>
+    </div>
+    <div class="relative mx-auto w-full max-w-sm pb-10 lg:col-span-5 lg:mt-6 lg:pb-4">
+      <div class="relative z-10 w-4/5 overflow-hidden rounded-sm shadow-photo">
+        <img
+          src="/images/opt/gallery/paisley-lotus-480.webp"
+          alt={lotus.alt.en}
+          data-alt-en={lotus.alt.en}
+          data-alt-es={lotus.alt.es}
+          width="480"
+          height="640"
+          loading="lazy"
+          fetchpriority="low"
+          decoding="async"
+          class="aspect-[3/4] w-full object-cover"
+        />
+      </div>
+      <div
+        class="absolute right-0 bottom-6 z-20 aspect-[3/4] w-1/2 overflow-hidden rounded-sm shadow-photo lg:bottom-2"
+      >
+        <img
+          src="/images/opt/gallery/mandala-eye-320.webp"
+          alt={mandala.alt.en}
+          data-alt-en={mandala.alt.en}
+          data-alt-es={mandala.alt.es}
+          width="320"
+          height="427"
+          loading="lazy"
+          fetchpriority="low"
+          decoding="async"
+          class="h-full w-full origin-[20%_48%] scale-[1.9] object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>

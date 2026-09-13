@@ -1,0 +1,59 @@
+---
+import { copy } from "../lib/content";
+const en = copy.en;
+const es = copy.es;
+---
+
+<section id="faq" class="below-fold bg-paper" aria-labelledby="faq-title">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12">
+    <div class="lg:col-span-4">
+      <h2
+        id="faq-title"
+        class="font-display text-section font-medium tracking-tight text-ink italic"
+        data-en={en.faq.title}
+        data-es={es.faq.title}
+      >
+        {en.faq.title}
+      </h2>
+    </div>
+    <div class="lg:col-span-8">
+      {
+        en.faq.items.map((item, i) => (
+          <details class="faq-item border-b border-line">
+            <summary class="group flex w-full cursor-pointer list-none items-start justify-between gap-6 py-5 text-left hover:opacity-80 [&::-webkit-details-marker]:hidden">
+              <span class="flex gap-4">
+                <span class="kicker mt-1.5 shrink-0 text-rose">{String(i + 1).padStart(2, "0")}</span>
+                <span
+                  class="font-display text-xl font-medium leading-snug text-ink sm:text-2xl"
+                  data-en={item.q}
+                  data-es={es.faq.items[i].q}
+                >
+                  {item.q}
+                </span>
+              </span>
+              <span
+                aria-hidden="true"
+                class="faq-plus mt-2 grid size-8 shrink-0 place-items-center text-muted"
+              >
+                <svg viewBox="0 0 16 16" class="size-4" fill="none">
+                  <path
+                    d="M8 1.5 v13 M1.5 8 h13"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linecap="round"></path>
+                </svg>
+              </span>
+            </summary>
+            <p
+              class="max-w-xl pb-6 pl-12 text-base leading-relaxed text-ink-soft"
+              data-en={item.a}
+              data-es={es.faq.items[i].a}
+            >
+              {item.a}
+            </p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
