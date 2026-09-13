@@ -5,10 +5,13 @@ import { cn } from "@/lib/utils";
 export function FaqSection() {
   const { t } = useI18n();
   return (
-    <section id="faq" className="bg-paper">
+    <section id="faq" className="bg-paper" aria-labelledby="faq-title">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <h2 className="font-display text-section font-medium tracking-tight text-ink italic">
+          <h2
+            id="faq-title"
+            className="font-display text-section font-medium tracking-tight text-ink italic"
+          >
             {t.faq.title}
           </h2>
         </div>

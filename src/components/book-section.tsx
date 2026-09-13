@@ -3,7 +3,11 @@ import { useI18n } from "@/lib/i18n";
 import { BOOKING_URL, INSTAGRAM_URL } from "@/lib/content";
 
 export function BookSection() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const portraitAlt =
+    lang === "es"
+      ? "Nina Romero, tatuadora cubana de fine line en Albuquerque, Nuevo México"
+      : "Nina Romero, Cuban fine line tattoo artist in Albuquerque, New Mexico";
   return (
     <section id="agendar" className="relative overflow-hidden bg-blush">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12">
@@ -38,7 +42,11 @@ export function BookSection() {
           <div className="overflow-hidden rounded-sm shadow-photo">
             <img
               src="/images/nina-profile.jpg"
-              alt="Nina Romero"
+              alt={portraitAlt}
+              width={1200}
+              height={1500}
+              loading="lazy"
+              decoding="async"
               className="aspect-[4/5] w-full object-cover object-top"
             />
           </div>

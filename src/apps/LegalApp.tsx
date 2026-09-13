@@ -17,7 +17,7 @@ function Body() {
 
 export default function LegalApp() {
   return (
-    <AppShell>
+    <AppShell page="legal">
       <Body />
     </AppShell>
   );

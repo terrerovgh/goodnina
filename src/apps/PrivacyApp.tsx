@@ -17,7 +17,7 @@ function Body() {
 
 export default function PrivacyApp() {
   return (
-    <AppShell>
+    <AppShell page="privacy">
       <Body />
     </AppShell>
   );

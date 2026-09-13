@@ -584,9 +584,11 @@ export const featuredWorks = coverIds.map(
 
 export const copy = {
   es: {
-    metaTitle: "Nina Romero — Fine line, floral y ornamental · Albuquerque",
+    metaTitle: "Nina Romero | Tatuadora fine line en Albuquerque, NM",
     metaDescription:
-      "Nina Romero, tatuadora cubana en Albuquerque, Nuevo México. Fine line, floral y ornamental. Agenda por Venue.",
+      "Tatuajes fine line, florales y ornamentales a medida, por Nina Romero — tatuadora cubana en Albuquerque, Nuevo México. Mira el trabajo y agenda por Venue.",
+    ogAlt:
+      "Nina Romero, tatuadora fine line en Albuquerque, entre flores, con corona de margaritas y crisantemos.",
     skip: "Saltar al contenido",
     nav: {
       work: "Galería",
@@ -598,17 +600,44 @@ export const copy = {
     hero: {
       kicker: "Albuquerque, New Mexico",
       title: "Nina Romero",
-      lede: "Fine line · Floral · Ornamental",
+      lede: "Fine line tattoo · Floral · Ornamental",
     },
     intro: {
-      p1: "Mi trabajo se centra principalmente en el fine line y en los detalles delicados. Me inspiran especialmente los elementos botánicos, las formas orgánicas y los diseños ornamentales, aunque disfruto explorar diferentes ideas siempre manteniendo una estética sutil y limpia.",
-      p2: "Me gusta crear piezas que acompañen de manera natural el cuerpo y que se sientan personales para quien las lleva. Para mí, cada tatuaje es una forma de crear algo bonito, intencional y especial, pensado para sentirse verdaderamente tuyo.",
+      title: "Dibujado para quien lo lleva",
+      p1: "Soy Nina Romero, tatuadora cubana en Albuquerque, Nuevo México. Mi trabajo se centra en el fine line y en los detalles delicados. Me inspiran los elementos botánicos, las formas orgánicas y los diseños ornamentales, aunque disfruto explorar otras ideas siempre con una estética sutil y limpia.",
+      p2: "Me gusta crear piezas a medida que acompañen el cuerpo y se sientan personales. Cada tatuaje es una forma de hacer algo bonito, intencional y especial — pensado para sentirse verdaderamente tuyo.",
+    },
+    styles: {
+      title: "El trabajo, por tipo",
+      items: [
+        {
+          name: "Fine line",
+          body: "Trazo fino y detalle de una sola aguja. Piezas pequeñas y precisas: un retrato en una línea, un animal diminuto, una marca que se lee como un dibujo de cerca.",
+        },
+        {
+          name: "Floral",
+          body: "Lirios, amapolas, enredaderas y tallos silvestres que siguen el hombro, el costado, el brazo. Botánica a medida — no flash de catálogo.",
+        },
+        {
+          name: "Ornamental",
+          body: "Mandalas, paisley, geometría y punteado. Trabajo que se sienta como una joya en el esternón, la mano o el tobillo.",
+        },
+        {
+          name: "Lettering",
+          body: "Un nombre, un verso, una sola línea en cursiva. Lettering que pertenece a la piel, con el ritmo y el peso de una escritura hecha a mano.",
+        },
+      ],
     },
     quote:
       "Cada tatuaje es una forma de crear algo bonito, intencional y especial — pensado para sentirse verdaderamente tuyo.",
     gallery: {
       title: "Galería",
+      pageTitle: "Galería de tatuajes",
+      metaTitle: "Galería de tatuajes | Fine line y floral — Nina Romero",
+      metaDescription:
+        "Tatuajes fine line, florales, ornamentales y lettering de Nina Romero en Albuquerque, NM. Piezas curadas y recientes. Agenda una sesión por Venue.",
       hint: "Desliza hacia el lado.",
+      lede: "Piezas curadas y recientes: floral, ornamental, lettering y fine line. Toca una para verla de cerca.",
       all: "Ver todo",
       filterAll: "Todas",
       filters: {
@@ -626,24 +655,28 @@ export const copy = {
       title: "Preguntas frecuentes",
       items: [
         {
-          q: "¿Cómo agendo?",
-          a: "Reserva por Venue o escríbeme por Instagram. Incluye referencias, zona, tamaño y tu disponibilidad.",
+          q: "¿Cómo agendo un tatuaje con Nina Romero?",
+          a: "Reserva por Venue o escríbeme por Instagram (@goodnina_tattooing). Incluye referencias, zona del cuerpo, tamaño aproximado y tu disponibilidad. Trabajo con cita en Albuquerque, Nuevo México.",
         },
         {
-          q: "¿Cuánto cuesta?",
-          a: "El precio depende del tamaño, el detalle y la colocación. El trabajo custom de fine line, floral y ornamental se cotiza después de ver tu idea. Normalmente se pide un depósito para guardar la fecha.",
+          q: "¿Cuánto cuesta un tatuaje fine line en Albuquerque?",
+          a: "El precio depende del tamaño, el detalle y la colocación. El trabajo custom de fine line, floral y ornamental se cotiza después de ver tu idea y dónde va en el cuerpo. Normalmente se pide un depósito para guardar la fecha.",
         },
         {
-          q: "¿Dónde está el estudio?",
+          q: "¿Dónde está el estudio de tatuaje?",
           a: "Tatuo en Albuquerque, Nuevo México. La dirección exacta y las notas de estacionamiento se comparten cuando se confirma la cita.",
         },
         {
-          q: "¿Cómo me preparo?",
+          q: "¿Solo haces fine line, floral y ornamental?",
+          a: "Ese es el centro de mi trabajo: fine line, botánica, ornamental y lettering. Si tu idea cabe en esa línea — un mandala, un verse, un animal en un trazo — podemos hablarlo. No hago realismo a color ni piezas de catálogo.",
+        },
+        {
+          q: "¿Cómo me preparo para la cita?",
           a: "Los días previos: nada de alcohol, sol fuerte ni medicamentos que adelgacen la sangre, salvo prescripción. El día de la cita, duerme, come, llega limpia/o y con ropa que deje acceso a la zona. Lleva identificación.",
         },
         {
-          q: "¿Y el cuidado después?",
-          a: "Deja el vendaje el tiempo que te indique. Lava con agua tibia y jabón sin perfume, seca sin frotar y aplica una capa fina de la crema recomendada. Nada de piscinas ni sol directo hasta que sane. No recojas costras.",
+          q: "¿Cómo se cuida un tatuaje fine line?",
+          a: "Deja el vendaje el tiempo que te indique. Lava con agua tibia y jabón sin perfume, seca sin frotar y aplica una capa fina de la crema recomendada. Nada de piscinas ni sol directo hasta que sane. No recojas costras — en fine line eso se nota más.",
         },
         {
           q: "¿Haces retoques?",
@@ -652,8 +685,8 @@ export const copy = {
       ],
     },
     book: {
-      title: "Cómo agendar",
-      body: "Las sesiones se reservan por Venue. Es la forma más simple, al menos por ahora. Si prefieres, también puedes escribirme por Instagram.",
+      title: "Agenda un tatuaje a medida",
+      body: "Las sesiones se reservan por Venue: referencias, colocación, tamaño y tus fechas. Tatuo en Albuquerque, Nuevo México. Si prefieres, también puedes escribirme por Instagram.",
       cta: "Agendar en Venue",
       instagram: "Instagram",
     },
@@ -661,21 +694,32 @@ export const copy = {
       location: "Albuquerque, New Mexico",
       legal: "Aviso legal",
       privacy: "Privacidad",
-      credit: "Nina Romero — fine line, floral y ornamental.",
+      credit:
+        "Nina Romero — tatuadora cubana en Albuquerque. Fine line, floral y ornamental.",
+      work: "Galería",
+      book: "Agendar",
     },
     privacy: {
       title: "Privacidad",
-      body: "This site is a portfolio. It does not store forms or personal data on this server. Booking happens on Venue; Instagram and Venue have their own policies. No tracking cookies are required to view the site.",
+      metaTitle: "Privacidad | Nina Romero",
+      metaDescription:
+        "Cómo trata este portafolio los datos: sin formularios en el servidor; las citas se reservan en Venue e Instagram.",
+      body: "Este sitio es un portafolio. No guarda formularios ni datos personales en este servidor. Las citas se reservan en Venue; Instagram y Venue tienen sus propias políticas. No se necesitan cookies de seguimiento para ver el sitio.",
     },
     legal: {
       title: "Aviso legal",
-      body: "Artist: Nina Romero (Jaline Romero Heredia). Albuquerque, New Mexico, USA. This website is a portfolio. Instagram @goodnina_tattooing.",
+      metaTitle: "Aviso legal | Nina Romero",
+      metaDescription:
+        "Aviso legal del portafolio de Nina Romero (Jaline Romero Heredia), tatuadora en Albuquerque, Nuevo México.",
+      body: "Artista: Nina Romero (Jaline Romero Heredia). Albuquerque, Nuevo México, EE. UU. Este sitio web es un portafolio de tatuaje fine line, floral y ornamental. Instagram @goodnina_tattooing.",
     },
   },
   en: {
-    metaTitle: "Nina Romero — Fine line, floral & ornamental · Albuquerque",
+    metaTitle: "Nina Romero | Fine Line Tattoo Artist in Albuquerque, NM",
     metaDescription:
-      "Nina Romero, Cuban tattoo artist in Albuquerque, New Mexico. Fine line, floral, and ornamental. Book through Venue.",
+      "Custom fine line, floral, and ornamental tattoos by Nina Romero — Cuban tattoo artist in Albuquerque, New Mexico. View the work and book a session on Venue.",
+    ogAlt:
+      "Nina Romero, fine line tattoo artist in Albuquerque, among daisies and chrysanthemums.",
     skip: "Skip to content",
     nav: {
       work: "Gallery",
@@ -687,17 +731,44 @@ export const copy = {
     hero: {
       kicker: "Albuquerque, New Mexico",
       title: "Nina Romero",
-      lede: "Fine line · Floral · Ornamental",
+      lede: "Fine line tattoo · Floral · Ornamental",
     },
     intro: {
-      p1: "My work centers on fine line and delicate detail. I'm especially drawn to botanical elements, organic forms, and ornamental design, though I enjoy exploring other ideas while keeping a quiet, clean aesthetic.",
-      p2: "I like making pieces that sit naturally on the body and feel personal to the person wearing them. For me, every tattoo is a way of making something beautiful, intentional, and special — meant to feel truly yours.",
+      title: "Drawn for the person wearing it",
+      p1: "I'm Nina Romero, a Cuban tattoo artist in Albuquerque, New Mexico. My work centers on fine line and delicate detail. I'm especially drawn to botanical elements, organic forms, and ornamental design, though I enjoy exploring other ideas while keeping a quiet, clean aesthetic.",
+      p2: "I like making custom pieces that sit naturally on the body and feel personal to the person wearing them. Every tattoo is a way of making something beautiful, intentional, and special — meant to feel truly yours.",
+    },
+    styles: {
+      title: "The work, by kind",
+      items: [
+        {
+          name: "Fine line",
+          body: "A quiet mark and single-needle detail. Small, precise pieces — a one-line portrait, a tiny animal, a drawing that reads as a line from across the room.",
+        },
+        {
+          name: "Floral",
+          body: "Lilies, poppies, vines, and wild stems that follow a shoulder, a rib, an arm. Custom botanicals — not a flash sheet.",
+        },
+        {
+          name: "Ornamental",
+          body: "Mandalas, paisley, geometry, and stipple. Work that sits like jewelry on the sternum, the hand, the ankle.",
+        },
+        {
+          name: "Lettering",
+          body: "A name, a verse, a single line of script. Lettering that belongs on skin, with the weight and rhythm of a hand.",
+        },
+      ],
     },
     quote:
       "Every tattoo is a way of making something beautiful, intentional, and special — meant to feel truly yours.",
     gallery: {
       title: "Gallery",
+      pageTitle: "Tattoo gallery",
+      metaTitle: "Tattoo Gallery | Fine Line & Floral — Nina Romero",
+      metaDescription:
+        "Custom fine line, floral, ornamental, and lettering tattoos by Nina Romero in Albuquerque, NM. Healed and fresh work — book a session on Venue.",
       hint: "Slide sideways.",
+      lede: "Healed and fresh tattoos — floral, ornamental, lettering, and fine line. Tap a piece to look closer.",
       all: "See all",
       filterAll: "All",
       filters: {
@@ -715,24 +786,28 @@ export const copy = {
       title: "Frequently asked",
       items: [
         {
-          q: "How do I book?",
-          a: "Book through Venue or DM me on Instagram. Include references, placement, size, and your availability.",
+          q: "How do I book a tattoo with Nina Romero?",
+          a: "Book through Venue or write me on Instagram (@goodnina_tattooing). Include references, placement, approximate size, and your availability. I tattoo by appointment in Albuquerque, New Mexico.",
         },
         {
-          q: "How much does it cost?",
-          a: "Price depends on size, detail, and placement. Fine line, floral, and ornamental custom work is quoted after I see your idea. A deposit is typically required to hold the date.",
+          q: "How much does a fine line tattoo cost in Albuquerque?",
+          a: "Price depends on size, detail, and placement. Custom fine line, floral, and ornamental work is quoted after I see your idea and where it sits on the body. A deposit is typically required to hold the date.",
         },
         {
-          q: "Where is the studio?",
+          q: "Where is the tattoo studio?",
           a: "I tattoo in Albuquerque, New Mexico. The exact address and parking notes are shared when your appointment is confirmed.",
         },
         {
-          q: "How should I prepare?",
+          q: "Do you only tattoo fine line, floral, and ornamental?",
+          a: "That's the center of the work: fine line, botanicals, ornamental, and lettering. If your idea lives in that line — a mandala, a verse, an animal in a single stroke — we can talk. I don't do color realism or flash-sheet pieces.",
+        },
+        {
+          q: "How should I prepare for my appointment?",
           a: "In the days before: no alcohol, heavy sun, or blood-thinning medication unless prescribed. The day of, sleep, eat, arrive clean, and wear clothing that gives access to the area. Bring ID.",
         },
         {
-          q: "What about aftercare?",
-          a: "Leave the bandage on for the time I tell you. Wash with lukewarm water and unscented soap, pat dry, and apply a thin layer of the recommended ointment. No pools or direct sun until healed. Don't pick scabs.",
+          q: "How do I take care of a fine line tattoo?",
+          a: "Leave the bandage on for the time I tell you. Wash with lukewarm water and unscented soap, pat dry, and apply a thin layer of the recommended ointment. No pools or direct sun until healed. Don't pick scabs — it shows more in fine line.",
         },
         {
           q: "Do you do touch-ups?",
@@ -741,8 +816,8 @@ export const copy = {
       ],
     },
     book: {
-      title: "How to book",
-      body: "Sessions are booked through Venue. It's the simplest way, at least for now. If you prefer, you can also write me on Instagram.",
+      title: "Book a custom tattoo",
+      body: "Sessions are reserved through Venue — references, placement, size, and your dates. I tattoo in Albuquerque, New Mexico. If you prefer, you can also write me on Instagram.",
       cta: "Book on Venue",
       instagram: "Instagram",
     },
@@ -750,15 +825,24 @@ export const copy = {
       location: "Albuquerque, New Mexico",
       legal: "Legal",
       privacy: "Privacy",
-      credit: "Nina Romero — fine line, floral & ornamental.",
+      credit:
+        "Nina Romero — Cuban tattoo artist in Albuquerque. Fine line, floral & ornamental.",
+      work: "Gallery",
+      book: "Book",
     },
     privacy: {
       title: "Privacy",
+      metaTitle: "Privacy | Nina Romero",
+      metaDescription:
+        "How this portfolio handles data: no forms stored here; booking happens on Venue and Instagram.",
       body: "This site is a portfolio. It does not store forms or personal data on this server. Booking happens on Venue; Instagram and Venue have their own policies. No tracking cookies are required to view the site.",
     },
     legal: {
       title: "Legal",
-      body: "Artist: Nina Romero (Jaline Romero Heredia). Albuquerque, New Mexico, USA. This website is a portfolio. Instagram @goodnina_tattooing.",
+      metaTitle: "Legal | Nina Romero",
+      metaDescription:
+        "Legal notice for Nina Romero (Jaline Romero Heredia), tattoo artist in Albuquerque, New Mexico.",
+      body: "Artist: Nina Romero (Jaline Romero Heredia). Albuquerque, New Mexico, USA. This website is a portfolio of fine line, floral, and ornamental tattooing. Instagram @goodnina_tattooing.",
     },
   },
 } as const;

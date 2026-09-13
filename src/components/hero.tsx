@@ -1,12 +1,20 @@
 import { useI18n } from "@/lib/i18n";
 
 export function Hero() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const alt =
+    lang === "es"
+      ? "Nina Romero, tatuadora fine line en Albuquerque, entre margaritas y crisantemos"
+      : "Nina Romero, fine line tattoo artist in Albuquerque, among daisies and chrysanthemums";
   return (
     <section className="relative min-h-svh overflow-hidden bg-ink">
       <img
         src="/images/hero.jpg"
-        alt="Nina Romero entre margaritas y crisantemos"
+        alt={alt}
+        width={1600}
+        height={2000}
+        fetchPriority="high"
+        decoding="async"
         className="hero-photo absolute inset-0 h-full w-full object-cover outline-none"
       />
       <div

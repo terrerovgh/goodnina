@@ -155,6 +155,10 @@ export function GalleryStrip() {
                 src={work.src}
                 alt={work.alt[lang]}
                 draggable={false}
+                width={900}
+                height={1200}
+                loading={i < 3 ? "eager" : "lazy"}
+                decoding="async"
                 className={cn(
                   "h-full w-full object-cover",
                   work.object === "left" && "object-left",

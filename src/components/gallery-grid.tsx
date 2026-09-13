@@ -77,6 +77,10 @@ export function GalleryGrid() {
                 <img
                   src={work.src}
                   alt={work.alt[lang]}
+                  width={work.wide ? 1600 : 900}
+                  height={work.wide ? 960 : 1200}
+                  loading="lazy"
+                  decoding="async"
                   className={cn(
                     "h-full w-full object-cover transition-transform duration-500 ease-[var(--ease-out-soft)] group-hover:scale-[1.03]",
                     work.object === "left" && "object-left",

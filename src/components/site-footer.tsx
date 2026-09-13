@@ -12,9 +12,12 @@ export function SiteFooter() {
           <p className="max-w-sm text-sm leading-relaxed text-muted">
             {t.footer.credit}
           </p>
-          <p className="kicker">{t.footer.location}</p>
+          <address className="kicker not-italic">{t.footer.location}</address>
         </div>
-        <div className="flex flex-col items-start gap-3 md:items-end">
+        <nav
+          className="flex flex-col items-start gap-3 md:items-end"
+          aria-label="Footer"
+        >
           <a
             href={INSTAGRAM_URL}
             target="_blank"
@@ -23,21 +26,30 @@ export function SiteFooter() {
           >
             {INSTAGRAM_HANDLE}
           </a>
-          <div className="flex gap-5 text-sm text-muted">
+          <div className="flex flex-wrap gap-5 text-sm text-muted">
+            <a
+              href="/galeria"
+              className="text-muted no-underline hover:text-ink"
+            >
+              {t.footer.work}
+            </a>
+            <a
+              href="/#agendar"
+              className="text-muted no-underline hover:text-ink"
+            >
+              {t.footer.book}
+            </a>
             <a
               href="/privacidad"
               className="text-muted no-underline hover:text-ink"
             >
               {t.footer.privacy}
             </a>
-            <a
-              href="/aviso"
-              className="text-muted no-underline hover:text-ink"
-            >
+            <a href="/aviso" className="text-muted no-underline hover:text-ink">
               {t.footer.legal}
             </a>
           </div>
-        </div>
+        </nav>
       </div>
     </footer>
   );

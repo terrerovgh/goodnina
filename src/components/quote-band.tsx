@@ -8,7 +8,9 @@ export function QuoteBand() {
         <p className="font-display text-section font-medium leading-snug tracking-tight italic text-on-photo">
           {t.quote}
         </p>
-        <footer className="mt-8 kicker text-on-photo/55">Nina Romero</footer>
+        <footer className="mt-8 kicker text-on-photo/55">
+          <cite className="not-italic">Nina Romero</cite>
+        </footer>
       </blockquote>
     </section>
   );
