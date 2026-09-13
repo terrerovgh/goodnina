@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" aria-label="Nina Romero">
+  <title>Nina Romero</title>
+  <g stroke-linejoin="round">
+        <circle cx="60.0" cy="60.0" r="55.20" fill="none" stroke="#E8E8E8" stroke-width="0.65" opacity="0.95"/>
+    <circle cx="60.0" cy="60.0" r="51.89" fill="none" stroke="#E8E8E8" stroke-width="0.45" opacity="0.55"/>
+    <path d="M60.00,25.78 Q72.86,12.01 77.11,30.36" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M77.11,30.36 Q95.13,24.87 89.64,42.89" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M89.64,42.89 Q107.99,47.14 94.22,60.00" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M94.22,60.00 Q107.99,72.86 89.64,77.11" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M89.64,77.11 Q95.13,95.13 77.11,89.64" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M77.11,89.64 Q72.86,107.99 60.00,94.22" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M60.00,94.22 Q47.14,107.99 42.89,89.64" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M42.89,89.64 Q24.87,95.13 30.36,77.11" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M30.36,77.11 Q12.01,72.86 25.78,60.00" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M25.78,60.00 Q12.01,47.14 30.36,42.89" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M30.36,42.89 Q24.87,24.87 42.89,30.36" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M42.89,30.36 Q47.14,12.01 60.00,25.78" fill="none" stroke="#E8E8E8" stroke-width="0.6" stroke-linecap="round"/>
+    <path d="M68.86,26.94 Q82.63,20.80 84.20,35.80" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M84.20,35.80 Q99.20,37.37 93.06,51.14" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M93.06,51.14 Q105.26,60.00 93.06,68.86" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M93.06,68.86 Q99.20,82.63 84.20,84.20" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M84.20,84.20 Q82.63,99.20 68.86,93.06" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M68.86,93.06 Q60.00,105.26 51.14,93.06" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M51.14,93.06 Q37.37,99.20 35.80,84.20" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M35.80,84.20 Q20.80,82.63 26.94,68.86" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M26.94,68.86 Q14.74,60.00 26.94,51.14" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M26.94,51.14 Q20.80,37.37 35.80,35.80" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M35.80,35.80 Q37.37,20.80 51.14,26.94" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <path d="M51.14,26.94 Q60.00,14.74 68.86,26.94" fill="none" stroke="#E8E8E8" stroke-width="0.45" stroke-linecap="round"/>
+    <polygon points="60.00,26.88 76.56,31.32 88.68,43.44 93.12,60.00 88.68,76.56 76.56,88.68 60.00,93.12 43.44,88.68 31.32,76.56 26.88,60.00 31.32,43.44 43.44,31.32" fill="none" stroke="#E8E8E8" stroke-width="0.55" opacity="0.9"/>
+    <polygon points="74.35,35.14 88.70,60.00 74.35,84.86 45.65,84.86 31.30,60.00 45.65,35.14" fill="none" stroke="#E8E8E8" stroke-width="0.55" opacity="0.85"/>
+    <line x1="60.00" y1="39.02" x2="60.00" y2="27.98" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="65.43" y1="39.74" x2="68.29" y2="29.07" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="70.49" y1="41.83" x2="76.01" y2="32.27" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="74.83" y1="45.17" x2="82.64" y2="37.36" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="78.17" y1="49.51" x2="87.73" y2="43.99" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="80.26" y1="54.57" x2="90.93" y2="51.71" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="80.98" y1="60.00" x2="92.02" y2="60.00" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="80.26" y1="65.43" x2="90.93" y2="68.29" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="78.17" y1="70.49" x2="87.73" y2="76.01" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="74.83" y1="74.83" x2="82.64" y2="82.64" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="70.49" y1="78.17" x2="76.01" y2="87.73" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="65.43" y1="80.26" x2="68.29" y2="90.93" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="60.00" y1="80.98" x2="60.00" y2="92.02" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="54.57" y1="80.26" x2="51.71" y2="90.93" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="49.51" y1="78.17" x2="43.99" y2="87.73" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="45.17" y1="74.83" x2="37.36" y2="82.64" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="41.83" y1="70.49" x2="32.27" y2="76.01" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="39.74" y1="65.43" x2="29.07" y2="68.29" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="39.02" y1="60.00" x2="27.98" y2="60.00" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="39.74" y1="54.57" x2="29.07" y2="51.71" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="41.83" y1="49.51" x2="32.27" y2="43.99" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="45.17" y1="45.17" x2="37.36" y2="37.36" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="49.51" y1="41.83" x2="43.99" y2="32.27" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <line x1="54.57" y1="39.74" x2="51.71" y2="29.07" stroke="#E8E8E8" stroke-width="0.4" stroke-linecap="round"/>
+    <circle cx="60.0" cy="60.0" r="22.08" fill="none" stroke="#E8E8E8" stroke-width="0.55" opacity="0.9"/>
+    <path d="M64.65,48.78 Q74.83,45.17 71.22,55.35" fill="none" stroke="#E8E8E8" stroke-width="0.55" stroke-linecap="round"/>
+    <path d="M71.22,55.35 Q80.98,60.00 71.22,64.65" fill="none" stroke="#E8E8E8" stroke-width="0.55" stroke-linecap="round"/>
+    <path d="M71.22,64.65 Q74.83,74.83 64.65,71.22" fill="none" stroke="#E8E8E8" stroke-width="0.55" stroke-linecap="round"/>
+    <path d="M64.65,71.22 Q60.00,80.98 55.35,71.22" fill="none" stroke="#E8E8E8" stroke-width="0.55" stroke-linecap="round"/>
+    <path d="M55.35,71.22 Q45.17,74.83 48.78,64.65" fill="none" stroke="#E8E8E8" stroke-width="0.55" stroke-linecap="round"/>
+    <path d="M48.78,64.65 Q39.02,60.00 48.78,55.35" fill="none" stroke="#E8E8E8" stroke-width="0.55" stroke-linecap="round"/>
+    <path d="M48.78,55.35 Q45.17,45.17 55.35,48.78" fill="none" stroke="#E8E8E8" stroke-width="0.55" stroke-linecap="round"/>
+    <path d="M55.35,48.78 Q60.00,39.02 64.65,48.78" fill="none" stroke="#E8E8E8" stroke-width="0.55" stroke-linecap="round"/>
+    <polygon points="60.00,47.86 68.59,51.41 72.14,60.00 68.59,68.59 60.00,72.14 51.41,68.59 47.86,60.00 51.41,51.41" fill="none" stroke="#E8E8E8" stroke-width="0.5" opacity="1"/>
+    <circle cx="60.0" cy="60.0" r="7.73" fill="none" stroke="#E8E8E8" stroke-width="0.6" opacity="0.95"/>
+    <circle cx="60.0" cy="60.0" r="3.31" fill="none" stroke="#E8E8E8" stroke-width="0.7" opacity="1"/>
+    <polygon points="61.37,58.63 61.37,61.37 58.63,61.37 58.63,58.63" fill="none" stroke="#E8E8E8" stroke-width="0.5" opacity="1"/>
+    <circle cx="70.29" cy="21.61" r="0.7" fill="#E8E8E8"/>
+    <circle cx="88.10" cy="31.90" r="0.7" fill="#E8E8E8"/>
+    <circle cx="98.39" cy="49.71" r="0.7" fill="#E8E8E8"/>
+    <circle cx="98.39" cy="70.29" r="0.7" fill="#E8E8E8"/>
+    <circle cx="88.10" cy="88.10" r="0.7" fill="#E8E8E8"/>
+    <circle cx="70.29" cy="98.39" r="0.7" fill="#E8E8E8"/>
+    <circle cx="49.71" cy="98.39" r="0.7" fill="#E8E8E8"/>
+    <circle cx="31.90" cy="88.10" r="0.7" fill="#E8E8E8"/>
+    <circle cx="21.61" cy="70.29" r="0.7" fill="#E8E8E8"/>
+    <circle cx="21.61" cy="49.71" r="0.7" fill="#E8E8E8"/>
+    <circle cx="31.90" cy="31.90" r="0.7" fill="#E8E8E8"/>
+    <circle cx="49.71" cy="21.61" r="0.7" fill="#E8E8E8"/>
+    <circle cx="60.00" cy="33.50" r="0.65" fill="#E8E8E8"/>
+    <circle cx="82.95" cy="46.75" r="0.65" fill="#E8E8E8"/>
+    <circle cx="82.95" cy="73.25" r="0.65" fill="#E8E8E8"/>
+    <circle cx="60.00" cy="86.50" r="0.65" fill="#E8E8E8"/>
+    <circle cx="37.05" cy="73.25" r="0.65" fill="#E8E8E8"/>
+    <circle cx="37.05" cy="46.75" r="0.65" fill="#E8E8E8"/>
+  </g>
+</svg>

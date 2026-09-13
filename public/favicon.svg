@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-label="Nina Romero">
+  <rect width="16" height="16" rx="3.5" fill="#F4EDE4"/>
+  <g fill="#1C1814">
+    <circle cx="8" cy="3.8" r="1.55"/>
+    <circle cx="11.99" cy="6.7" r="1.55"/>
+    <circle cx="10.47" cy="11.4" r="1.55"/>
+    <circle cx="5.53" cy="11.4" r="1.55"/>
+    <circle cx="4.01" cy="6.7" r="1.55"/>
+  </g>
+  <circle cx="8" cy="8" r="2.05" fill="#1C1814"/>
+  <circle cx="8" cy="8" r="0.95" fill="#F4EDE4"/>
+</svg>
