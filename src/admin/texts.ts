@@ -1,8 +1,9 @@
 import Sortable from "sortablejs";
-import { LIMITS } from "../lib/schema";
+import { LIMITS, type IntroImage } from "../lib/schema";
 import { confirmButton, h } from "./dom";
-import { state, touch } from "./store";
-import { biField } from "./ui";
+import { thumb, toJpeg } from "./images";
+import { addUpload, dropUpload, state, tempId, touch } from "./store";
+import { biField, toast } from "./ui";
 
 let root: HTMLElement;
 
@@ -79,6 +80,54 @@ function faq(): HTMLElement {
   );
 }
 
+async function replacePhoto(img: IntroImage, file: File | undefined) {
+  if (!file) return;
+  try {
+    const blob = await toJpeg(file);
+    // A photo never overwrites a file in the repository: a new photo, a new id.
+    dropUpload("intro", img.id);
+    img.id = tempId("sobre-mi");
+    addUpload("intro", img.id, blob);
+    touch();
+    render("intro");
+  } catch (err) {
+    toast(err instanceof Error ? err.message : "No se pudo preparar la foto.", "error");
+  }
+}
+
+function introPhotos(): HTMLElement {
+  const labels = [
+    ["Foto grande", "La de atrás."],
+    ["Foto pequeña", "La que va encima, en la esquina."],
+  ];
+  return h(
+    "div",
+    { class: "adm-intro-photos" },
+    state.content.texts.intro.images.map((img, i) => {
+      const picker = h("input", {
+        type: "file",
+        accept: "image/jpeg,image/png,image/webp",
+        hidden: true,
+        onchange: () => void replacePhoto(img, picker.files?.[0]),
+      });
+      return h(
+        "fieldset",
+        { class: "adm-field adm-intro-photo" },
+        h("legend", null, labels[i][0]),
+        h("p", { class: "adm-hint" }, `${labels[i][1]} Se recorta en vertical (3:4).`),
+        h(
+          "div",
+          { class: "adm-intro-row" },
+          thumb("intro", img.id, img.alt.es || img.alt.en, "adm-intro-thumb"),
+          h("button", { type: "button", class: "adm-btn", onclick: () => picker.click() }, "Cambiar foto"),
+          picker,
+        ),
+        biField("Descripción", img.alt, { hint: "Para quien no puede ver la foto y para Google." }),
+      );
+    }),
+  );
+}
+
 function render(open?: string) {
   const t = state.content.texts;
   const wasOpen = new Set(
@@ -101,10 +150,11 @@ function render(open?: string) {
       "intro",
       block(
         "Sobre mí",
-        "Tu presentación.",
+        "Tu presentación y sus dos fotos.",
         biField("Título", t.intro.title),
         biField("Primer párrafo", t.intro.p1, { long: true }),
         biField("Segundo párrafo", t.intro.p2, { long: true }),
+        introPhotos(),
       ),
     ],
     [

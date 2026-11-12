@@ -2,6 +2,12 @@
 import { copy } from "../lib/content";
 const en = copy.en;
 const es = copy.es;
+// Large photo, then the small one over its corner. Both are edited in the panel.
+const [large, small] = en.intro.images.map((img, i) => ({
+  src: `/images/opt/intro/${img.id}-480.webp`,
+  en: img.alt,
+  es: es.intro.images[i].alt,
+}));
 ---
 
 <section id="sobre" class="below-fold bg-paper" aria-labelledby="sobre-title">
@@ -25,10 +31,10 @@ const es = copy.es;
     <div class="relative mx-auto w-full max-w-sm pb-10 lg:col-span-5 lg:mt-6 lg:pb-4">
       <div class="relative z-10 w-4/5 overflow-hidden rounded-sm shadow-photo">
         <img
-          src="/images/opt/intro-lotus-480.webp"
-          alt={en.introImages.lotus}
-          data-alt-en={en.introImages.lotus}
-          data-alt-es={es.introImages.lotus}
+          src={large.src}
+          alt={large.en}
+          data-alt-en={large.en}
+          data-alt-es={large.es}
           width="480"
           height="640"
           loading="lazy"
@@ -41,16 +47,16 @@ const es = copy.es;
         class="absolute right-0 bottom-6 z-20 aspect-[3/4] w-1/2 overflow-hidden rounded-sm shadow-photo lg:bottom-2"
       >
         <img
-          src="/images/opt/intro-mandala-320.webp"
-          alt={en.introImages.mandala}
-          data-alt-en={en.introImages.mandala}
-          data-alt-es={es.introImages.mandala}
-          width="320"
-          height="427"
+          src={small.src}
+          alt={small.en}
+          data-alt-en={small.en}
+          data-alt-es={small.es}
+          width="480"
+          height="640"
           loading="lazy"
           fetchpriority="low"
           decoding="async"
-          class="h-full w-full origin-[20%_48%] scale-[1.9] object-cover"
+          class="h-full w-full object-cover"
         />
       </div>
     </div>

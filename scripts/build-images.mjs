@@ -10,7 +10,7 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const KINDS = ["gallery", "news"];
+const KINDS = ["gallery", "news", "intro"];
 const WIDTHS = [480, 960];
 const QUALITY = 72;
 

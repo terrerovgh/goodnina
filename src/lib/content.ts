@@ -53,11 +53,6 @@ const fixed = {
       book: "Agendar",
     },
     langLabel: "Idioma",
-    introImages: {
-      lotus: "Un loto ornamental con volutas de paisley recorriendo el antebrazo.",
-      mandala:
-        "Mandala ornamental con un ojo al centro y geometría bajando hacia la mano.",
-    },
     news: {
       title: "Novedades",
       more: "Más información",
@@ -122,11 +117,6 @@ const fixed = {
       book: "Book",
     },
     langLabel: "Language",
-    introImages: {
-      lotus: "An ornamental lotus with paisley scrolls running the forearm.",
-      mandala:
-        "An ornamental mandala with an eye at the center, geometry running to the hand.",
-    },
     news: {
       title: "News",
       more: "More info",

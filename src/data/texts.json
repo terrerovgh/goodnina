@@ -25,7 +25,23 @@
     "p2": {
       "es": "Me gusta crear piezas a medida que acompañen el cuerpo y se sientan personales. Cada tatuaje es una forma de hacer algo bonito, intencional y especial — pensado para sentirse verdaderamente tuyo.",
       "en": "I like making custom pieces that sit naturally on the body and feel personal to the person wearing them. Every tattoo is a way of making something beautiful, intentional, and special — meant to feel truly yours."
-    }
+    },
+    "images": [
+      {
+        "id": "paisley-lotus",
+        "alt": {
+          "es": "Un loto ornamental con volutas de paisley recorriendo el antebrazo.",
+          "en": "An ornamental lotus with paisley scrolls running the forearm."
+        }
+      },
+      {
+        "id": "mandala-eye",
+        "alt": {
+          "es": "Mandala ornamental con un ojo al centro y geometría bajando hacia la mano.",
+          "en": "An ornamental mandala with an eye at the center, geometry running to the hand."
+        }
+      }
+    ]
   },
   "styles": {
     "title": {

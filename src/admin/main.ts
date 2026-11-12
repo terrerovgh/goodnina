@@ -69,7 +69,7 @@ function updateBar() {
 
 /** Give everything created in this session a readable, unique, permanent id. */
 function finalizeIds() {
-  const { gallery, news } = state.content;
+  const { gallery, news, texts } = state.content;
 
   const takenWorks = new Set([
     ...state.repoIds.gallery,
@@ -96,6 +96,18 @@ function finalizeIds() {
     takenNews.add(id);
     renameUpload("news", item.id, id);
     item.id = id;
+  }
+
+  const takenIntro = new Set([
+    ...state.repoIds.intro,
+    ...texts.intro.images.filter((img) => !isTemp(img.id)).map((img) => img.id),
+  ]);
+  for (const img of texts.intro.images) {
+    if (!isTemp(img.id)) continue;
+    const id = uniqueId(slugify(img.alt.en || img.alt.es) || "sobre-mi", takenIntro);
+    takenIntro.add(id);
+    renameUpload("intro", img.id, id);
+    img.id = id;
   }
 }
 

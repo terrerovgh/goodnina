@@ -40,9 +40,12 @@ export type NewsItem = {
 
 export type News = { items: NewsItem[] };
 
+export type IntroImage = { id: string; alt: Bi };
+
 export type Texts = {
   hero: { kicker: Bi; title: Bi; lede: Bi };
-  intro: { title: Bi; p1: Bi; p2: Bi };
+  /** images[0] is the large photo, images[1] the small one over it. */
+  intro: { title: Bi; p1: Bi; p2: Bi; images: IntroImage[] };
   styles: { title: Bi; items: { name: Bi; body: Bi }[] };
   quote: Bi;
   faq: { title: Bi; items: { q: Bi; a: Bi }[] };
@@ -57,6 +60,7 @@ export const LIMITS = {
   news: 30,
   faq: 30,
   styles: 4,
+  introImages: 2,
   short: 140,
   alt: 300,
   long: 1500,
@@ -188,6 +192,11 @@ export function parseTexts(input: unknown): Texts {
   const faq = record(root.faq, "Preguntas");
   const book = record(root.book, "Agendar");
 
+  const introImages = list(intro.images, "Sobre mí, fotos", LIMITS.introImages);
+  if (introImages.length !== LIMITS.introImages) {
+    fail("Sobre mí, fotos", `deben ser exactamente ${LIMITS.introImages}`);
+  }
+
   const styleItems = list(styles.items, "Estilos", LIMITS.styles);
   if (styleItems.length !== LIMITS.styles) {
     fail("Estilos", `deben ser exactamente ${LIMITS.styles}`);
@@ -203,6 +212,11 @@ export function parseTexts(input: unknown): Texts {
       title: bi(intro.title, "Sobre mí, título", LIMITS.short),
       p1: bi(intro.p1, "Sobre mí, primer párrafo", LIMITS.long),
       p2: bi(intro.p2, "Sobre mí, segundo párrafo", LIMITS.long),
+      images: introImages.map((raw, i) => {
+        const path = `Sobre mí, foto ${i + 1}`;
+        const r = record(raw, path);
+        return { id: id(r.id, path), alt: bi(r.alt, `${path}, descripción`, LIMITS.alt) };
+      }),
     },
     styles: {
       title: bi(styles.title, "Estilos, título", LIMITS.short),
@@ -329,8 +343,27 @@ export function uniqueId(base: string, taken: Iterable<string>): string {
   return `${root}-${n}`;
 }
 
-export const IMAGE_DIRS = { gallery: "public/images/gallery", news: "public/images/news" } as const;
+export const IMAGE_DIRS = {
+  gallery: "public/images/gallery",
+  news: "public/images/news",
+  intro: "public/images/intro",
+} as const;
+export const IMAGE_KINDS = Object.keys(IMAGE_DIRS) as ImageKind[];
 export type ImageKind = keyof typeof IMAGE_DIRS;
+
+/** Folder of the generated WebP sizes, public/images/opt/<kind>. */
+export function optDir(kind: ImageKind): string {
+  return `public/images/opt/${kind}`;
+}
+
+/** Ids whose photo the content refers to, per kind. */
+export function referencedImages(content: Content): Record<ImageKind, Set<string>> {
+  return {
+    gallery: new Set(content.gallery.works.map((w) => w.id)),
+    news: new Set(content.news.items.filter((n) => n.image).map((n) => n.id)),
+    intro: new Set(content.texts.intro.images.map((img) => img.id)),
+  };
+}
 
 export function imagePath(kind: ImageKind, imageId: string): string {
   return `${IMAGE_DIRS[kind]}/${imageId}.jpg`;

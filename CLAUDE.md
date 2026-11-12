@@ -24,7 +24,7 @@ The admin API only exists under `wrangler pages dev`, not under `astro dev`. It 
 ## Architecture
 
 ### Content: data files, edited by the admin panel
-What the artist can change lives in `src/data/`: `gallery.json` (works in mosaic order, plus `cover`, the ids of the homepage strip), `texts.json` (hero, intro, styles, quote, FAQ, booking) and `news.json` (announcements). Every text leaf there is `{ es, en }`.
+What the artist can change lives in `src/data/`: `gallery.json` (works in mosaic order, plus `cover`, the ids of the homepage strip), `texts.json` (hero, intro and its two photos, styles, quote, FAQ, booking) and `news.json` (announcements). Every text leaf there is `{ es, en }`.
 
 `src/lib/schema.ts` defines those shapes and validates them. It is imported by the site build, the admin panel and the Pages Functions, so it must stay free of imports and of DOM or Node APIs. Its error messages are in Spanish because the panel shows them as they are.
 
@@ -70,7 +70,7 @@ Route slugs and section anchors are Spanish (`/galeria`, `/aviso`, `/privacidad`
 ### Images
 A work's `id` is its filename. The original is `public/images/gallery/<id>.jpg` (long side at most 1600 px; the panel downsizes uploads in the browser), and pages load `/images/opt/gallery/<id>-480.webp` and `<id>-960.webp` (`src/lib/img.ts`; the lightbox builds the same path by hand in `site.ts`). Announcement photos follow the same layout under `news/`.
 
-`scripts/build-images.mjs` runs before `dev` and `build` and generates any missing WebP from its original. The WebP files that were already in git stay tracked; the ones for photos added later are build output and ignored (see `.gitignore`). The two photos in the intro section are separate files (`public/images/opt/intro-*.webp`) so that removing a work from the gallery cannot break the homepage.
+`scripts/build-images.mjs` runs before `dev` and `build` and generates any missing WebP from its original. The WebP files that were already in git stay tracked; the ones for photos added later are build output and ignored (see `.gitignore`). The two photos of the intro section ("Drawn for the person wearing it") are their own kind, `intro/`, listed in `texts.json` under `intro.images` (large photo first) and replaced from the Textos tab; they are not gallery works, so removing a work cannot break the homepage.
 
 ### SEO
 `Base.astro` takes a `page` prop (`SeoPage` in `src/lib/seo.ts`) and derives title, description, canonical, and the JSON-LD graph from it. Adding an indexable page touches four places: the `SeoPage` union, `seoFor` and the breadcrumb list in `seo.ts`, meta copy in `content.ts`, and the `indexed` set in `astro.config.mjs` that filters the sitemap.

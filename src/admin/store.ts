@@ -1,4 +1,4 @@
-import type { Content, ImageKind } from "../lib/schema";
+import { referencedImages, type Content, type ImageKind } from "../lib/schema";
 
 export type PendingUpload = { kind: ImageKind; id: string; blob: Blob };
 
@@ -14,7 +14,7 @@ export const state = {
   /** Local preview URLs for photos uploaded in this session. */
   previews: new Map<string, string>(),
   /** Ids whose photo already exists in the repository (they cannot be reused). */
-  repoIds: { gallery: new Set<string>(), news: new Set<string>() } as Record<ImageKind, Set<string>>,
+  repoIds: {} as Record<ImageKind, Set<string>>,
 };
 
 export const key = (kind: ImageKind, id: string) => `${kind}/${id}`;
@@ -38,10 +38,7 @@ export function setLoaded(sha: string, content: Content, email = state.email) {
   state.content = content;
   state.saved = JSON.stringify(content);
   state.uploads.clear();
-  state.repoIds = {
-    gallery: new Set(content.gallery.works.map((w) => w.id)),
-    news: new Set(content.news.items.filter((n) => n.image).map((n) => n.id)),
-  };
+  state.repoIds = referencedImages(content);
 }
 
 let counter = 0;

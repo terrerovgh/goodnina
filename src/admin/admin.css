@@ -785,6 +785,27 @@ textarea.adm-input {
   box-shadow: var(--shadow);
 }
 
+.adm-intro-photo {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.adm-intro-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.adm-intro-thumb {
+  width: 6rem;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+
 .adm-sheet-foot {
   margin-top: 1.5rem;
   padding-top: 1.25rem;

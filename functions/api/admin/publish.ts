@@ -13,8 +13,10 @@ import {
   DATA_FILES,
   ID_RE,
   IMAGE_DIRS,
+  IMAGE_KINDS,
   LIMITS,
   ValidationError,
+  optDir,
   parseContent,
   type ImageKind,
 } from "../../../src/lib/schema";
@@ -26,7 +28,7 @@ const CONFLICT =
  * multipart/form-data:
  *   baseSha  commit the panel loaded its content from
  *   content  JSON { gallery, texts, news }
- *   gallery/<id>, news/<id>  new photos (JPEG)
+ *   gallery/<id>, news/<id>, intro/<id>  new photos (JPEG)
  * Writes everything as one commit, which triggers one site build.
  */
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
@@ -68,20 +70,20 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
     if ((await headSha(repo)) !== baseSha) return problem(CONFLICT, 409);
 
-    const [gallery, texts, news, galleryJpg, galleryOpt, newsJpg, newsOpt] = await Promise.all([
+    const [gallery, texts, news, originals, derived] = await Promise.all([
       readText(repo, DATA_FILES.gallery, baseSha),
       readText(repo, DATA_FILES.texts, baseSha),
       readText(repo, DATA_FILES.news, baseSha),
-      listDir(repo, IMAGE_DIRS.gallery, baseSha),
-      listDir(repo, "public/images/opt/gallery", baseSha),
-      listDir(repo, IMAGE_DIRS.news, baseSha),
-      listDir(repo, "public/images/opt/news", baseSha),
+      Promise.all(IMAGE_KINDS.map((kind) => listDir(repo, IMAGE_DIRS[kind], baseSha))),
+      Promise.all(IMAGE_KINDS.map((kind) => listDir(repo, optDir(kind), baseSha))),
     ]);
+    const byKind = (lists: string[][]) =>
+      Object.fromEntries(IMAGE_KINDS.map((kind, i) => [kind, lists[i]])) as Record<ImageKind, string[]>;
 
     const plan = planPublish(content, uploads, {
       files: { gallery, texts, news },
-      originals: { gallery: galleryJpg, news: newsJpg },
-      derived: { gallery: galleryOpt, news: newsOpt },
+      originals: byKind(originals),
+      derived: byKind(derived),
     });
     if (plan.changes.length === 0) return reply({ sha: baseSha, unchanged: true });
 

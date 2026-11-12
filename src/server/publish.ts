@@ -5,9 +5,12 @@
 import {
   DATA_FILES,
   IMAGE_DIRS,
+  IMAGE_KINDS,
   LIMITS,
   ValidationError,
   imagePath,
+  optDir,
+  referencedImages,
   serialize,
   type Content,
   type ImageKind,
@@ -28,10 +31,6 @@ export type PendingChange = Change | { path: string; upload: Upload };
 
 export type Plan = { changes: PendingChange[]; message: string };
 
-const OPT_DIRS: Record<ImageKind, string> = {
-  gallery: "public/images/opt/gallery",
-  news: "public/images/opt/news",
-};
 const DERIVED_RE = /^(.+)-(?:480|960)\.webp$/;
 
 function isJpeg(bytes: Uint8Array): boolean {
@@ -39,14 +38,10 @@ function isJpeg(bytes: Uint8Array): boolean {
 }
 
 export function planPublish(next: Content, uploads: Upload[], current: Current): Plan {
-  const wanted: Record<ImageKind, Set<string>> = {
-    gallery: new Set(next.gallery.works.map((w) => w.id)),
-    news: new Set(next.news.items.filter((n) => n.image).map((n) => n.id)),
-  };
-  const existing: Record<ImageKind, Set<string>> = {
-    gallery: new Set(current.originals.gallery),
-    news: new Set(current.originals.news),
-  };
+  const wanted = referencedImages(next);
+  const existing = Object.fromEntries(
+    IMAGE_KINDS.map((kind) => [kind, new Set(current.originals[kind])]),
+  ) as Record<ImageKind, Set<string>>;
 
   if (uploads.length > LIMITS.imagesPerPublish) {
     throw new ValidationError(
@@ -55,7 +50,9 @@ export function planPublish(next: Content, uploads: Upload[], current: Current):
   }
 
   const changes: PendingChange[] = [];
-  const uploaded: Record<ImageKind, Set<string>> = { gallery: new Set(), news: new Set() };
+  const uploaded = Object.fromEntries(
+    IMAGE_KINDS.map((kind) => [kind, new Set<string>()]),
+  ) as Record<ImageKind, Set<string>>;
 
   for (const up of uploads) {
     // An upload for something no longer in the content is simply not needed.
@@ -74,7 +71,7 @@ export function planPublish(next: Content, uploads: Upload[], current: Current):
   }
 
   // Every referenced photo must be in the repository or in this publish.
-  for (const kind of ["gallery", "news"] as const) {
+  for (const kind of IMAGE_KINDS) {
     for (const id of wanted[kind]) {
       if (!existing[kind].has(`${id}.jpg`) && !uploaded[kind].has(id)) {
         throw new ValidationError(
@@ -86,7 +83,7 @@ export function planPublish(next: Content, uploads: Upload[], current: Current):
 
   // Remove the files of anything that is no longer referenced.
   let removed = 0;
-  for (const kind of ["gallery", "news"] as const) {
+  for (const kind of IMAGE_KINDS) {
     for (const name of current.originals[kind]) {
       if (!name.endsWith(".jpg")) continue;
       if (!wanted[kind].has(name.slice(0, -4))) {
@@ -97,7 +94,7 @@ export function planPublish(next: Content, uploads: Upload[], current: Current):
     for (const name of current.derived[kind]) {
       const match = DERIVED_RE.exec(name);
       if (match && !wanted[kind].has(match[1])) {
-        changes.push({ path: `${OPT_DIRS[kind]}/${name}`, delete: true });
+        changes.push({ path: `${optDir(kind)}/${name}`, delete: true });
       }
     }
   }
@@ -112,7 +109,7 @@ export function planPublish(next: Content, uploads: Upload[], current: Current):
     }
   }
 
-  const added = uploaded.gallery.size + uploaded.news.size;
+  const added = IMAGE_KINDS.reduce((n, kind) => n + uploaded[kind].size, 0);
   const detail = [
     added ? `${added} foto${added === 1 ? "" : "s"} nueva${added === 1 ? "" : "s"}` : "",
     removed ? `${removed} eliminada${removed === 1 ? "" : "s"}` : "",
