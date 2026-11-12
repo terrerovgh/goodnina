@@ -1,19 +1,19 @@
 {
   "works": [
     {
-      "id": "poetry-anemones",
-      "category": "floral",
-      "alt": {
-        "es": "Anémonas cubriendo el rostro, y arriba: “She lives in the poetry she cannot write.”",
-        "en": "Anemones covering the face, with “She lives in the poetry she cannot write” above."
-      }
-    },
-    {
       "id": "cautionary-tale",
       "category": "lettering",
       "alt": {
         "es": "Lettering corto y limpio: “a cautionary tale.”",
         "en": "Short, clean lettering: “a cautionary tale.”"
+      }
+    },
+    {
+      "id": "poetry-anemones",
+      "category": "floral",
+      "alt": {
+        "es": "Anémonas cubriendo el rostro, y arriba: “She lives in the poetry she cannot write.”",
+        "en": "Anemones covering the face, with “She lives in the poetry she cannot write” above."
       }
     },
     {
