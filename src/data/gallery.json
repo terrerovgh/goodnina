@@ -1,0 +1,504 @@
+{
+  "works": [
+    {
+      "id": "poetry-anemones",
+      "category": "floral",
+      "alt": {
+        "es": "Anémonas cubriendo el rostro, y arriba: “She lives in the poetry she cannot write.”",
+        "en": "Anemones covering the face, with “She lives in the poetry she cannot write” above."
+      }
+    },
+    {
+      "id": "cautionary-tale",
+      "category": "lettering",
+      "alt": {
+        "es": "Lettering corto y limpio: “a cautionary tale.”",
+        "en": "Short, clean lettering: “a cautionary tale.”"
+      }
+    },
+    {
+      "id": "blackberry",
+      "category": "floral",
+      "alt": {
+        "es": "Zarzamoras y flores silvestres en el antebrazo, con un pequeño sello junto a la muñeca.",
+        "en": "Wild blackberries and blossoms on the forearm, with a small stamp at the wrist."
+      }
+    },
+    {
+      "id": "moon-hills",
+      "category": "fineline",
+      "alt": {
+        "es": "Luna, estrellas y un horizonte de montañas, todo en una sola línea.",
+        "en": "Moon, stars, and a mountain line — all in a single quiet stroke."
+      }
+    },
+    {
+      "id": "heart-cross",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Un corazón de tallo y una amapola, unido a una cruz en fine line.",
+        "en": "A stem-drawn heart and poppy, joined to a small cross in fine line."
+      }
+    },
+    {
+      "id": "wonder-lost",
+      "category": "lettering",
+      "alt": {
+        "es": "Lettering cursivo: “Not all those who wonder are lost.”",
+        "en": "Script lettering: “Not all those who wonder are lost.”"
+      }
+    },
+    {
+      "id": "puppy",
+      "category": "fineline",
+      "alt": {
+        "es": "Un perrito diminuto en fine line, apenas una silueta en el brazo.",
+        "en": "A tiny dog in fine line — just a silhouette on the arm."
+      }
+    },
+    {
+      "id": "vine-arm",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Enredadera de campanillas en fine line, subiendo por el brazo.",
+        "en": "Fine-line morning glories climbing the upper arm."
+      }
+    },
+    {
+      "id": "golden-ratio",
+      "category": "ornamental",
+      "alt": {
+        "es": "Espiral áurea y cuadrados de Fibonacci, dibujados a línea fina.",
+        "en": "A golden-ratio spiral and Fibonacci squares, drawn in fine line."
+      }
+    },
+    {
+      "id": "consider-lilies",
+      "category": "floral",
+      "alt": {
+        "es": "Dos lirios en fine line y el verso “consider the lilies” — Mateo 6:28.",
+        "en": "Two fine-line lilies and the line “consider the lilies” — Matthew 6:28."
+      }
+    },
+    {
+      "id": "roadrunner",
+      "category": "fineline",
+      "alt": {
+        "es": "Un correcaminos en fine line, de paso ligero sobre el brazo.",
+        "en": "A roadrunner in fine line, mid-stride on the arm."
+      }
+    },
+    {
+      "id": "mason-jar",
+      "category": "floral",
+      "alt": {
+        "es": "Un frasco con lavanda, margaritas, un colibrí y una mariposa, en el tobillo.",
+        "en": "A jar of lavender and daisies, with a hummingbird and a butterfly, on the ankle."
+      }
+    },
+    {
+      "id": "raven-book",
+      "category": "lettering",
+      "alt": {
+        "es": "Un cuervo sobre un libro abierto, y debajo: “You have been in every line I have ever read.”",
+        "en": "A raven on an open book, and below: “You have been in every line I have ever read.”"
+      }
+    },
+    {
+      "id": "thunderbird",
+      "category": "ornamental",
+      "alt": {
+        "es": "Ave del trueno en línea fina sobre la muñeca.",
+        "en": "A thunderbird in fine line on the wrist."
+      }
+    },
+    {
+      "id": "lily-shoulder",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Lirios recorriendo el hombro, ya curados, en fine line.",
+        "en": "Lilies running over the shoulder, healed, in fine line."
+      }
+    },
+    {
+      "id": "astronaut-neck",
+      "category": "fineline",
+      "alt": {
+        "es": "Un astronauta en la nuca, con estrellas, lunas y un planeta a su alrededor.",
+        "en": "An astronaut at the nape, with stars, moons, and a planet around him."
+      }
+    },
+    {
+      "id": "astronaut-detail",
+      "category": "fineline",
+      "alt": {
+        "es": "Detalle del astronauta: sombreado suave y traje en fine line.",
+        "en": "Detail of the astronaut — soft shading and a fine-line suit."
+      }
+    },
+    {
+      "id": "line-portraits",
+      "category": "fineline",
+      "alt": {
+        "es": "Dos perfiles en una sola línea, con flores y las fechas 2007 y 1983.",
+        "en": "Two profiles in a single line, with flowers and the years 2007 and 1983."
+      }
+    },
+    {
+      "id": "bull-skull",
+      "category": "floral",
+      "alt": {
+        "es": "Cráneo de toro con una figura, una cruz y flores, en el costado.",
+        "en": "A bull skull with a small figure, a cross, and flowers, on the side."
+      }
+    },
+    {
+      "id": "ohana",
+      "category": "lettering",
+      "wide": true,
+      "alt": {
+        "es": "Hibisco, lettering y pequeñas figuras recorriendo el antebrazo — Ohana y Hakuna Matata.",
+        "en": "Hibiscus, lettering, and small figures along the forearm — Ohana and Hakuna Matata."
+      }
+    },
+    {
+      "id": "floral-shark",
+      "category": "fineline",
+      "alt": {
+        "es": "Un tiburón en contorno, lleno de flores, en la espalda.",
+        "en": "An outline of a shark, filled with flowers, on the back."
+      }
+    },
+    {
+      "id": "mandala-eye",
+      "category": "ornamental",
+      "object": "left",
+      "alt": {
+        "es": "Mandala ornamental con un ojo al centro y geometría bajando hacia la mano.",
+        "en": "An ornamental mandala with an eye at the center, geometry running to the hand."
+      }
+    },
+    {
+      "id": "shoulder-garden",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Flores en el hombro, una mariposa y un cráneo con lettering al costado.",
+        "en": "Flowers on the shoulder, a butterfly, and a floral skull with lettering down the arm."
+      }
+    },
+    {
+      "id": "back-florals",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Amapolas, narcisos y una margarita recorriendo el omóplato, en fine line.",
+        "en": "Poppies, daffodils, and a daisy running over the shoulder blade, in fine line."
+      }
+    },
+    {
+      "id": "finger-script",
+      "category": "lettering",
+      "alt": {
+        "es": "Lettering minúsculo en los dedos: una firma en cursiva y un numeral romano.",
+        "en": "Tiny lettering on the fingers — a script initial and a Roman numeral."
+      }
+    },
+    {
+      "id": "calla-lilies",
+      "category": "floral",
+      "alt": {
+        "es": "Dos calas en una sola línea, recién hechas en el antebrazo.",
+        "en": "Two calla lilies in a single line, fresh on the forearm."
+      }
+    },
+    {
+      "id": "lily-stars",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Lirios y estrellas recorriendo el brazo, y “Fiat” escrito en el dorso de la mano.",
+        "en": "Lilies and stars running down the arm, with “Fiat” on the back of the hand."
+      }
+    },
+    {
+      "id": "matching-anchors",
+      "category": "fineline",
+      "alt": {
+        "es": "Dos anclas pequeñas a juego — una en la muñeca, otra en el pecho.",
+        "en": "Two small matching anchors — one on the wrist, one on the chest."
+      }
+    },
+    {
+      "id": "sylvia",
+      "category": "lettering",
+      "alt": {
+        "es": "El nombre “sylvia” en una cursiva fina y limpia.",
+        "en": "The name “sylvia” in a quiet, fine script."
+      }
+    },
+    {
+      "id": "rosary",
+      "category": "floral",
+      "alt": {
+        "es": "Un rosario de rosa, lirio, mariposas y una cruz, cayendo por el antebrazo.",
+        "en": "A rosary of rose, lily, butterflies, and a cross, falling down the forearm."
+      }
+    },
+    {
+      "id": "rib-hummingbird",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Narcisos y amapolas en el costado, con un colibrí acercándose a las flores.",
+        "en": "Daffodils and poppies on the rib, with a hummingbird leaning into the flowers."
+      }
+    },
+    {
+      "id": "geometric-cube",
+      "category": "ornamental",
+      "alt": {
+        "es": "Un cubo geométrico de grecas y un patrón de estrellas en la nuca.",
+        "en": "A geometric cube of meanders and a star pattern at the nape."
+      }
+    },
+    {
+      "id": "running-horses",
+      "category": "fineline",
+      "alt": {
+        "es": "Tres caballos diminutos al galope, en una sola línea sobre la piel.",
+        "en": "Three tiny horses in a gallop, drawn in a single quiet line."
+      }
+    },
+    {
+      "id": "kite-line",
+      "category": "fineline",
+      "alt": {
+        "es": "Una cometa y su hilo, todo en un trazo continuo.",
+        "en": "A kite and its string, all in one continuous stroke."
+      }
+    },
+    {
+      "id": "spider-star",
+      "category": "fineline",
+      "alt": {
+        "es": "Una araña diminuta colgando de una estrella, en la muñeca.",
+        "en": "A tiny spider hanging from a star, on the wrist."
+      }
+    },
+    {
+      "id": "cowboy-skull",
+      "category": "fineline",
+      "alt": {
+        "es": "Un cráneo de toro con un vaquero y una cruz, en el interior del brazo.",
+        "en": "A bull skull with a small cowboy and a cross, on the inner arm."
+      }
+    },
+    {
+      "id": "celtic-knots",
+      "category": "ornamental",
+      "alt": {
+        "es": "Cuatro nudos celtas en cruz, rodeados de un punteado suave.",
+        "en": "Four Celtic knots in a cross, ringed with a soft stipple."
+      }
+    },
+    {
+      "id": "lily-ribbon",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Un lirio en el hombro, con un listón y estrellas que lo rodean.",
+        "en": "A lily on the shoulder, with a ribbon and stars around it."
+      }
+    },
+    {
+      "id": "paisley-lotus",
+      "category": "ornamental",
+      "alt": {
+        "es": "Un loto ornamental con volutas de paisley recorriendo el antebrazo.",
+        "en": "An ornamental lotus with paisley scrolls running the forearm."
+      }
+    },
+    {
+      "id": "stipple-ankle",
+      "category": "ornamental",
+      "alt": {
+        "es": "Un rombo ornamental en punteado, sobre el tobillo.",
+        "en": "An ornamental diamond in stipple, on the ankle."
+      }
+    },
+    {
+      "id": "gone-fishing",
+      "category": "lettering",
+      "alt": {
+        "es": "“GONE fishing” con una caña y la fecha 1.7.23.",
+        "en": "“GONE fishing” with a rod and the date 1.7.23."
+      }
+    },
+    {
+      "id": "friends-wherever",
+      "category": "lettering",
+      "alt": {
+        "es": "Lettering cursivo bajando el antebrazo: “you'll have friends wherever you go.”",
+        "en": "Script running down the forearm: “you'll have friends wherever you go.”"
+      }
+    },
+    {
+      "id": "sternum-ornament",
+      "category": "ornamental",
+      "alt": {
+        "es": "Un adorno simétrico en punteado, colocado en el esternón.",
+        "en": "A symmetrical stippled ornament, placed on the sternum."
+      }
+    },
+    {
+      "id": "lego-brick",
+      "category": "fineline",
+      "alt": {
+        "es": "Un ladrillo de construcción en fine line, pequeño y preciso.",
+        "en": "A building brick in fine line — small and precise."
+      }
+    },
+    {
+      "id": "burn-slow",
+      "category": "ornamental",
+      "alt": {
+        "es": "“burn slow” en el dorso de la mano, con estrellas y marcas ornamentales en los dedos.",
+        "en": "“burn slow” on the back of the hand, with stars and ornamental marks on the fingers."
+      }
+    },
+    {
+      "id": "ladybug",
+      "category": "fineline",
+      "alt": {
+        "es": "Una mariquita diminuta — del tamaño de un centavo — en fine line.",
+        "en": "A tiny ladybug, about the size of a penny, in fine line."
+      }
+    },
+    {
+      "id": "zia-sun",
+      "category": "ornamental",
+      "alt": {
+        "es": "El sol Zia, símbolo de Nuevo México, en una línea limpia sobre la muñeca.",
+        "en": "The Zia sun, New Mexico’s symbol, in a clean line on the wrist."
+      }
+    },
+    {
+      "id": "lightly-child",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "“lightly child” en cursiva junto a un hombro de flores y una mariposa.",
+        "en": "“lightly child” in script beside a shoulder of flowers and a butterfly."
+      }
+    },
+    {
+      "id": "lotus-ribs",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Un loto y una campanilla recorriendo el costado, con tallos que siguen el cuerpo.",
+        "en": "A lotus and a bellflower along the ribs, stems following the body."
+      }
+    },
+    {
+      "id": "dragonflies",
+      "category": "fineline",
+      "alt": {
+        "es": "Cuatro libélulas diminutas y corazones sobre la clavícula.",
+        "en": "Four tiny dragonflies and hearts across the collarbone."
+      }
+    },
+    {
+      "id": "wild-stems",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Tallos silvestres envolviendo el brazo, finos y botánicos.",
+        "en": "Wild stems wrapping the arm — thin, botanical, quiet."
+      }
+    },
+    {
+      "id": "finger-charms",
+      "category": "fineline",
+      "alt": {
+        "es": "Miniaturas en los dedos: un candado, una vela y una hoja.",
+        "en": "Tiny charms on the fingers: a lock, a candle, and a leaf."
+      }
+    },
+    {
+      "id": "swallows-vine",
+      "category": "floral",
+      "object": "left",
+      "alt": {
+        "es": "Una enredadera de florecitas recorriendo el hombro, con dos golondrinas.",
+        "en": "A vine of small blossoms over the shoulder, with two swallows."
+      }
+    },
+    {
+      "id": "moth-chest",
+      "category": "fineline",
+      "alt": {
+        "es": "Una polilla detallada en el pecho, con una estrella debajo.",
+        "en": "A detailed moth on the chest, with a small star beneath it."
+      }
+    },
+    {
+      "id": "pinky-promise",
+      "category": "fineline",
+      "alt": {
+        "es": "Dos manos en promesa, con signos zodiacales y una estrella al centro.",
+        "en": "Two hands in a pinky promise, with zodiac marks and a star between them."
+      }
+    },
+    {
+      "id": "let-them",
+      "category": "lettering",
+      "alt": {
+        "es": "Lettering cursivo: “let them.”",
+        "en": "Script lettering: “let them.”"
+      }
+    },
+    {
+      "id": "floral-sleeve",
+      "category": "floral",
+      "alt": {
+        "es": "Un medio sleeve floral: lirio, girasol, rosa y margarita, con sombreado suave.",
+        "en": "A floral half-sleeve — lily, sunflower, rose, and daisy, with soft shading."
+      }
+    },
+    {
+      "id": "axolotl",
+      "category": "fineline",
+      "alt": {
+        "es": "Un ajolote con sombrero de mago, en fine line y punteado.",
+        "en": "An axolotl in a wizard hat, in fine line and stipple."
+      }
+    },
+    {
+      "id": "diver",
+      "category": "fineline",
+      "alt": {
+        "es": "Una nadadora diminuta, a punto de entrar al agua.",
+        "en": "A tiny swimmer, just as she enters the water."
+      }
+    }
+  ],
+  "cover": [
+    "back-florals",
+    "raven-book",
+    "mandala-eye",
+    "floral-sleeve",
+    "line-portraits",
+    "friends-wherever",
+    "paisley-lotus",
+    "rosary",
+    "axolotl",
+    "swallows-vine",
+    "golden-ratio",
+    "cowboy-skull"
+  ]
+}

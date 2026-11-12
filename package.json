@@ -6,19 +6,26 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "astro dev --host 0.0.0.0 --port 4321",
-    "build": "astro build",
+    "dev": "npm run images && astro dev --host 0.0.0.0 --port 4321",
+    "build": "npm run images && astro build",
     "preview": "astro preview --host 0.0.0.0 --port 4321",
-    "check": "astro check"
+    "check": "astro check",
+    "images": "node scripts/build-images.mjs",
+    "typecheck": "tsc --noEmit && tsc -p functions/tsconfig.json"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.2",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.0",
+    "jose": "^6.2.17",
+    "sharp": "^0.35.5",
+    "sortablejs": "^1.15.7",
     "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261110.1",
     "@types/node": "^22.18.1",
+    "@types/sortablejs": "^1.15.9",
     "typescript": "^5.9.2",
     "wrangler": "^4.34.0"
   }

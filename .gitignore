@@ -12,3 +12,9 @@ docker-compose.yml
 nginx.conf
 adapt.py
 populate_ig.py
+
+# Admin panel: local secrets, and image sizes generated at build time.
+# The WebP files already tracked in these folders stay tracked.
+.dev.vars
+public/images/opt/gallery/
+public/images/opt/news/

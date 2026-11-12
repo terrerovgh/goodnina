@@ -1,0 +1,174 @@
+{
+  "hero": {
+    "kicker": {
+      "es": "Albuquerque, New Mexico",
+      "en": "Albuquerque, New Mexico"
+    },
+    "title": {
+      "es": "Nina Romero",
+      "en": "Nina Romero"
+    },
+    "lede": {
+      "es": "Fine line tattoo · Floral · Ornamental",
+      "en": "Fine line tattoo · Floral · Ornamental"
+    }
+  },
+  "intro": {
+    "title": {
+      "es": "Dibujado para quien lo lleva",
+      "en": "Drawn for the person wearing it"
+    },
+    "p1": {
+      "es": "Soy Nina Romero, tatuadora cubana en Albuquerque, Nuevo México. Mi trabajo se centra en el fine line y en los detalles delicados. Me inspiran los elementos botánicos, las formas orgánicas y los diseños ornamentales, aunque disfruto explorar otras ideas siempre con una estética sutil y limpia.",
+      "en": "I'm Nina Romero, a Cuban tattoo artist in Albuquerque, New Mexico. My work centers on fine line and delicate detail. I'm especially drawn to botanical elements, organic forms, and ornamental design, though I enjoy exploring other ideas while keeping a quiet, clean aesthetic."
+    },
+    "p2": {
+      "es": "Me gusta crear piezas a medida que acompañen el cuerpo y se sientan personales. Cada tatuaje es una forma de hacer algo bonito, intencional y especial — pensado para sentirse verdaderamente tuyo.",
+      "en": "I like making custom pieces that sit naturally on the body and feel personal to the person wearing them. Every tattoo is a way of making something beautiful, intentional, and special — meant to feel truly yours."
+    }
+  },
+  "styles": {
+    "title": {
+      "es": "El trabajo, por tipo",
+      "en": "The work, by kind"
+    },
+    "items": [
+      {
+        "name": {
+          "es": "Fine line",
+          "en": "Fine line"
+        },
+        "body": {
+          "es": "Trazo fino y detalle de una sola aguja. Piezas pequeñas y precisas: un retrato en una línea, un animal diminuto, una marca que se lee como un dibujo de cerca.",
+          "en": "A quiet mark and single-needle detail. Small, precise pieces — a one-line portrait, a tiny animal, a drawing that reads as a line from across the room."
+        }
+      },
+      {
+        "name": {
+          "es": "Floral",
+          "en": "Floral"
+        },
+        "body": {
+          "es": "Lirios, amapolas, enredaderas y tallos silvestres que siguen el hombro, el costado, el brazo. Botánica a medida — no flash de catálogo.",
+          "en": "Lilies, poppies, vines, and wild stems that follow a shoulder, a rib, an arm. Custom botanicals — not a flash sheet."
+        }
+      },
+      {
+        "name": {
+          "es": "Ornamental",
+          "en": "Ornamental"
+        },
+        "body": {
+          "es": "Mandalas, paisley, geometría y punteado. Trabajo que se sienta como una joya en el esternón, la mano o el tobillo.",
+          "en": "Mandalas, paisley, geometry, and stipple. Work that sits like jewelry on the sternum, the hand, the ankle."
+        }
+      },
+      {
+        "name": {
+          "es": "Lettering",
+          "en": "Lettering"
+        },
+        "body": {
+          "es": "Un nombre, un verso, una sola línea en cursiva. Lettering que pertenece a la piel, con el ritmo y el peso de una escritura hecha a mano.",
+          "en": "A name, a verse, a single line of script. Lettering that belongs on skin, with the weight and rhythm of a hand."
+        }
+      }
+    ]
+  },
+  "quote": {
+    "es": "Cada tatuaje es una forma de crear algo bonito, intencional y especial — pensado para sentirse verdaderamente tuyo.",
+    "en": "Every tattoo is a way of making something beautiful, intentional, and special — meant to feel truly yours."
+  },
+  "faq": {
+    "title": {
+      "es": "Preguntas frecuentes",
+      "en": "Frequently asked"
+    },
+    "items": [
+      {
+        "q": {
+          "es": "¿Cómo agendo un tatuaje con Nina Romero?",
+          "en": "How do I book a tattoo with Nina Romero?"
+        },
+        "a": {
+          "es": "Reserva por Venue o escríbeme por Instagram (@goodnina_tattooing). Incluye referencias, zona del cuerpo, tamaño aproximado y tu disponibilidad. Trabajo con cita en Albuquerque, Nuevo México.",
+          "en": "Book through Venue or write me on Instagram (@goodnina_tattooing). Include references, placement, approximate size, and your availability. I tattoo by appointment in Albuquerque, New Mexico."
+        }
+      },
+      {
+        "q": {
+          "es": "¿Cuánto cuesta un tatuaje fine line en Albuquerque?",
+          "en": "How much does a fine line tattoo cost in Albuquerque?"
+        },
+        "a": {
+          "es": "El precio depende del tamaño, el detalle y la colocación. El trabajo custom de fine line, floral y ornamental se cotiza después de ver tu idea y dónde va en el cuerpo. Normalmente se pide un depósito para guardar la fecha.",
+          "en": "Price depends on size, detail, and placement. Custom fine line, floral, and ornamental work is quoted after I see your idea and where it sits on the body. A deposit is typically required to hold the date."
+        }
+      },
+      {
+        "q": {
+          "es": "¿Dónde está el estudio de tatuaje?",
+          "en": "Where is the tattoo studio?"
+        },
+        "a": {
+          "es": "Tatuo en Albuquerque, Nuevo México. La dirección exacta y las notas de estacionamiento se comparten cuando se confirma la cita.",
+          "en": "I tattoo in Albuquerque, New Mexico. The exact address and parking notes are shared when your appointment is confirmed."
+        }
+      },
+      {
+        "q": {
+          "es": "¿Solo haces fine line, floral y ornamental?",
+          "en": "Do you only tattoo fine line, floral, and ornamental?"
+        },
+        "a": {
+          "es": "Ese es el centro de mi trabajo: fine line, botánica, ornamental y lettering. Si tu idea cabe en esa línea — un mandala, un verse, un animal en un trazo — podemos hablarlo. No hago realismo a color ni piezas de catálogo.",
+          "en": "That's the center of the work: fine line, botanicals, ornamental, and lettering. If your idea lives in that line — a mandala, a verse, an animal in a single stroke — we can talk. I don't do color realism or flash-sheet pieces."
+        }
+      },
+      {
+        "q": {
+          "es": "¿Cómo me preparo para la cita?",
+          "en": "How should I prepare for my appointment?"
+        },
+        "a": {
+          "es": "Los días previos: nada de alcohol, sol fuerte ni medicamentos que adelgacen la sangre, salvo prescripción. El día de la cita, duerme, come, llega limpia/o y con ropa que deje acceso a la zona. Lleva identificación.",
+          "en": "In the days before: no alcohol, heavy sun, or blood-thinning medication unless prescribed. The day of, sleep, eat, arrive clean, and wear clothing that gives access to the area. Bring ID."
+        }
+      },
+      {
+        "q": {
+          "es": "¿Cómo se cuida un tatuaje fine line?",
+          "en": "How do I take care of a fine line tattoo?"
+        },
+        "a": {
+          "es": "Deja el vendaje el tiempo que te indique. Lava con agua tibia y jabón sin perfume, seca sin frotar y aplica una capa fina de la crema recomendada. Nada de piscinas ni sol directo hasta que sane. No recojas costras — en fine line eso se nota más.",
+          "en": "Leave the bandage on for the time I tell you. Wash with lukewarm water and unscented soap, pat dry, and apply a thin layer of the recommended ointment. No pools or direct sun until healed. Don't pick scabs — it shows more in fine line."
+        }
+      },
+      {
+        "q": {
+          "es": "¿Haces retoques?",
+          "en": "Do you do touch-ups?"
+        },
+        "a": {
+          "es": "Cuando esté completamente sano, si alguna zona necesita un retoque, escríbeme por Instagram o Venue dentro de la ventana que te dé.",
+          "en": "Once fully healed, if a small area needs a touch-up, reach out via Instagram or Venue within the window I give you."
+        }
+      }
+    ]
+  },
+  "book": {
+    "title": {
+      "es": "Agenda un tatuaje a medida",
+      "en": "Book a custom tattoo"
+    },
+    "body": {
+      "es": "Las sesiones se reservan por Venue: referencias, colocación, tamaño y tus fechas. Tatuo en Albuquerque, Nuevo México. Si prefieres, también puedes escribirme por Instagram.",
+      "en": "Sessions are reserved through Venue — references, placement, size, and your dates. I tattoo in Albuquerque, New Mexico. If you prefer, you can also write me on Instagram."
+    },
+    "cta": {
+      "es": "Agendar en Venue",
+      "en": "Book on Venue"
+    }
+  }
+}

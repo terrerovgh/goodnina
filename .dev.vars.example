@@ -1,0 +1,16 @@
+# Local settings for the Pages dev server. Copy to .dev.vars (ignored by git).
+# In production these are set in the Cloudflare Pages project; see README.
+
+# Fine-grained GitHub token with "Contents: read and write" on this repository.
+GITHUB_TOKEN=
+GITHUB_REPO=terrerovgh/goodnina
+# Use a scratch branch locally so test publishes never reach main.
+GITHUB_BRANCH=admin-sandbox
+
+# Skips the Cloudflare Access check. Only honoured on localhost / 127.0.0.1.
+DEV_BYPASS_AUTH=1
+
+# Needed only without the bypass:
+# ACCESS_TEAM_DOMAIN=your-team.cloudflareaccess.com
+# ACCESS_AUD=
+# ADMIN_EMAILS=first@example.com,second@example.com

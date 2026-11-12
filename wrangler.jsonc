@@ -1,5 +1,13 @@
 {
   "name": "goodnina",
   "compatibility_date": "2026-09-13",
-  "pages_build_output_dir": "./dist"
+  "pages_build_output_dir": "./dist",
+  // Admin panel (/admin). GITHUB_TOKEN and ADMIN_EMAILS are secrets set in
+  // the Pages dashboard; these values are not secret.
+  "vars": {
+    "GITHUB_REPO": "terrerovgh/goodnina",
+    "GITHUB_BRANCH": "main",
+    "ACCESS_TEAM_DOMAIN": "terrerov.cloudflareaccess.com",
+    "ACCESS_AUD": "c23303fd4ab6a907b9290d88750c0ec1d1139f75044031168703a444ed2b114c"
+  }
 }
