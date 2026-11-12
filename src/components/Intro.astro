@@ -1,9 +1,7 @@
 ---
-import { copy, works } from "../lib/content";
+import { copy } from "../lib/content";
 const en = copy.en;
 const es = copy.es;
-const lotus = works.find((w) => w.id === "paisley-lotus")!;
-const mandala = works.find((w) => w.id === "mandala-eye")!;
 ---
 
 <section id="sobre" class="below-fold bg-paper" aria-labelledby="sobre-title">
@@ -27,10 +25,10 @@ const mandala = works.find((w) => w.id === "mandala-eye")!;
     <div class="relative mx-auto w-full max-w-sm pb-10 lg:col-span-5 lg:mt-6 lg:pb-4">
       <div class="relative z-10 w-4/5 overflow-hidden rounded-sm shadow-photo">
         <img
-          src="/images/opt/gallery/paisley-lotus-480.webp"
-          alt={lotus.alt.en}
-          data-alt-en={lotus.alt.en}
-          data-alt-es={lotus.alt.es}
+          src="/images/opt/intro-lotus-480.webp"
+          alt={en.introImages.lotus}
+          data-alt-en={en.introImages.lotus}
+          data-alt-es={es.introImages.lotus}
           width="480"
           height="640"
           loading="lazy"
@@ -43,10 +41,10 @@ const mandala = works.find((w) => w.id === "mandala-eye")!;
         class="absolute right-0 bottom-6 z-20 aspect-[3/4] w-1/2 overflow-hidden rounded-sm shadow-photo lg:bottom-2"
       >
         <img
-          src="/images/opt/gallery/mandala-eye-320.webp"
-          alt={mandala.alt.en}
-          data-alt-en={mandala.alt.en}
-          data-alt-es={mandala.alt.es}
+          src="/images/opt/intro-mandala-320.webp"
+          alt={en.introImages.mandala}
+          data-alt-en={en.introImages.mandala}
+          data-alt-es={es.introImages.mandala}
           width="320"
           height="427"
           loading="lazy"

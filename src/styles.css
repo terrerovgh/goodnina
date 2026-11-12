@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* The admin panel has its own stylesheet; keep its class names out of this one. */
+@source not "./admin";
 
 @font-face {
   font-family: "Cormorant Garamond";

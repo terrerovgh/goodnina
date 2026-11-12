@@ -1,0 +1,128 @@
+---
+import { copy, news } from "../lib/content";
+import { isNewsVisible } from "../lib/schema";
+const en = copy.en;
+const es = copy.es;
+
+// The build may run hours before or after the visitor's "today", so keep
+// anything that expired within the last day and let site.ts hide it precisely.
+const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+const items = news.filter((item) => isNewsVisible(item, yesterday));
+
+function formatDate(date: string, locale: string) {
+  return new Intl.DateTimeFormat(locale, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${date}T00:00:00Z`));
+}
+---
+
+{
+  items.length > 0 && (
+    <section id="novedades" class="below-fold bg-foam" aria-labelledby="novedades-title" data-news>
+      <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+        <h2
+          id="novedades-title"
+          class="font-display text-section font-medium tracking-tight text-ink italic"
+          data-en={en.news.title}
+          data-es={es.news.title}
+        >
+          {en.news.title}
+        </h2>
+        <ul class="mt-10 grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          {items.map((item) => (
+            <li
+              class="flex flex-col overflow-hidden rounded-md bg-paper shadow-photo"
+              data-news-item
+              data-expires={item.expires}
+            >
+              {item.image && (
+                <img
+                  src={`/images/opt/news/${item.id}-480.webp`}
+                  srcset={`/images/opt/news/${item.id}-480.webp 480w, /images/opt/news/${item.id}-960.webp 960w`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  alt={item.title.en}
+                  data-alt-en={item.title.en}
+                  data-alt-es={item.title.es}
+                  width="480"
+                  height="360"
+                  loading="lazy"
+                  fetchpriority="low"
+                  decoding="async"
+                  class="aspect-[4/3] w-full object-cover"
+                />
+              )}
+              <div class="flex flex-1 flex-col items-start p-6">
+                {item.date && (
+                  <time
+                    datetime={item.date}
+                    class="kicker mb-3 text-rose"
+                    data-en={formatDate(item.date, "en-US")}
+                    data-es={formatDate(item.date, "es-US")}
+                  >
+                    {formatDate(item.date, "en-US")}
+                  </time>
+                )}
+                <h3
+                  class="font-display text-2xl font-medium leading-snug text-ink italic"
+                  data-en={item.title.en}
+                  data-es={item.title.es}
+                >
+                  {item.title.en}
+                </h3>
+                <p
+                  class="mt-3 text-sm leading-relaxed text-ink-soft"
+                  data-en={item.body.en}
+                  data-es={item.body.es}
+                >
+                  {item.body.en}
+                </p>
+                {item.url && (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="kicker mt-5 text-ink underline underline-offset-4 hover:opacity-70"
+                    data-en={item.cta?.en ?? en.news.more}
+                    data-es={item.cta?.es ?? es.news.more}
+                  >
+                    {item.cta?.en ?? en.news.more}
+                  </a>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+{
+  /*
+   * The site is static, so cards past their last day are hidden in the browser.
+   * Inline and right after the section: it runs before first paint, and pages
+   * without announcements carry no script at all. Kept out of site.ts, which is
+   * only inlined while its bundle stays under Vite's 4 KB limit.
+   */
+  items.some((item) => item.expires) && (
+    <script is:inline>
+      (function () {
+        var s = document.querySelector("[data-news]");
+        if (!s) return;
+        var d = new Date();
+        var p = function (n) { return String(n).padStart(2, "0"); };
+        var today = d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+        var shown = 0;
+        s.querySelectorAll("[data-news-item]").forEach(function (item) {
+          var expires = item.getAttribute("data-expires");
+          item.hidden = !!expires && expires < today;
+          if (!item.hidden) shown++;
+        });
+        s.hidden = shown === 0;
+      })();
+    </script>
+  )
+}

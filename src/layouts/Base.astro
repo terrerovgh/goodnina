@@ -26,7 +26,10 @@ const robots =
   Astro.props.robots ?? "index, follow, max-image-preview:large";
 const canonical = new URL(seoEn?.path ?? Astro.url.pathname, SITE_URL).href;
 const og = new URL("/og.jpg", SITE_URL).href;
-const jsonLd = page ? JSON.stringify(jsonLdForPage(page, "en")) : null;
+// Escaped so editable text (FAQ answers) can never close the script element.
+const jsonLd = page
+  ? JSON.stringify(jsonLdForPage(page, "en")).replace(/</g, "\\u003c")
+  : null;
 const overHero = Astro.props.overHero ?? false;
 ---
 

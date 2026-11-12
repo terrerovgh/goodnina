@@ -11,3 +11,14 @@
 
 /og.jpg
   Cache-Control: public, max-age=86400
+
+/admin
+  Cache-Control: no-store
+  X-Robots-Tag: noindex
+
+/admin/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex
+
+/version.json
+  Cache-Control: no-store
